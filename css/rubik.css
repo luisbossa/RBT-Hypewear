@@ -1,0 +1,124 @@
+.rubik-container {
+  width: 100%;
+  max-width: 550px;
+  display: none;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  gap: 2px;
+}
+
+.rubik-cell {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.rubik-cell button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.rubik-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.rubik-cell button:hover img {
+  transform: scale(1.05);
+}
+
+/*---------- RUBIK SLIDER ------------*/
+
+.carrusel-2 {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.imagenes {
+  width: auto;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--c-white);
+}
+
+.imagenes img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.imagenes img.activo {
+  display: block;
+}
+
+.rubik-content {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+}
+
+.rubik-content h4 {
+  font-family: "Typewriter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.rubik-content p {
+  font-family: "Typewriter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.controles {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn {
+  font-family: "Typewriter", sans-serif;
+  display: inline-block;
+  background: black;
+  color: var(--c-white);
+  padding: 10px 15px;
+  text-decoration: underline;
+  text-decoration-color: var(--c-yellow);
+  text-underline-offset: 4px;
+  border: 1px solid var(--c-blk);
+  cursor: pointer;
+}
+
+/* ✅ Responsive para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .imagenes {
+    height: 250px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .titulo {
+    font-size: 1rem;
+  }
+
+  .texto {
+    font-size: 0.9rem;
+  }
+}

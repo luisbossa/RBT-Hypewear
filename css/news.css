@@ -1,0 +1,99 @@
+.news-wrapper {
+  width: 100%;
+  height: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carrusel {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carrusel img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.botones-carrusel {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.boton {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.boton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.news-content {
+  width: 300px;
+  padding: 20px 20px 0 20px;
+}
+
+.news-content h4 {
+  font-family: "Typewriter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.news-content p {
+  font-family: "Typewriter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn-back {
+  width: fit-content;
+  font-family: "Typewriter", sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  background: transparent;
+  color: var(--c-white);
+  padding: 10px 20px 10px 0;
+  text-decoration: underline;
+  text-decoration-color: var(--c-yellow);
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.y-color {
+  font-family: "SplendidI", sans-serif;
+  font-size: 20px;
+  color: var(--c-yellow);
+}
+
+.boton.disabled {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+  .boton {
+    padding: 8px;
+  }
+}

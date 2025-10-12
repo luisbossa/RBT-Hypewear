@@ -1,0 +1,159 @@
+.contact-section {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem 2rem 0 2rem;
+  margin-bottom: 1rem;
+  background-color: var(--c-white);
+}
+
+.contact-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  letter-spacing: 1px;
+  color: var(--c-blk);
+  font-family: "Typewriter", sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 7px;
+  font-family: inherit;
+  outline: none;
+  font-family: "Typewriter", sans-serif;
+  transition: border 0.2s ease;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-select {
+  position: relative;
+}
+
+.form-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.form-select svg {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  pointer-events: none;
+}
+
+.btn-submit {
+  width: fit-content;
+  color: var(--c-white);
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: var(--c-blk);
+  border: 1px solid var(--c-blk);
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.btn-submit:hover {
+  border-bottom: 1px solid var(--c-yellow);
+}
+
+/* Agrupación de inputs con mensaje de error */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* Mensajes de error */
+.error-msg {
+  color: rgb(197, 48, 48);
+  font-size: 13px;
+  font-family: "Typewriter", sans-serif;
+  height: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Cuando se activa el mensaje de error */
+.error-msg.show {
+  opacity: 1;
+}
+
+/* Mensaje de éxito */
+.success-message {
+  width: 300px;
+  max-width: 80%;
+  padding: 2rem 1.5rem;
+  position: fixed; /* mejor que absolute para centrar */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  background-color: var(--c-white);
+  border: 1px solid var(--c-blk);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 100;
+}
+
+.success-message.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+  pointer-events: auto;
+}
+
+.success-message img {
+  width: 100%;
+  max-width: 180px;
+  margin-bottom: 0.5rem;
+}
+
+.msm-div {
+  padding: 10px;
+  background-color: var(--c-white);
+}
+
+.success-message p {
+  font-family: "Typewriter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-blk);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
