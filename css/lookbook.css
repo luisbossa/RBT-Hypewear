@@ -61,6 +61,13 @@
   line-height: 1.6;
 }
 
+.lookbook-btn-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .lookbook-container {
     flex-direction: column;
