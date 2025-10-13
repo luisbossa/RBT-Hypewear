@@ -1,5 +1,5 @@
 .drop-section {
-  width: 100%;
+  width: auto;
   max-width: 550px;
   display: none;
   margin: 0 auto;
@@ -20,7 +20,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px 20px 15px 20px;
+  padding: 20px 0 15px 0;
   gap: 2px;
 }
 
@@ -53,14 +53,18 @@
 /*---------- drop SLIDER ------------*/
 
 .drop-img-toggle {
-  width: 100%;
-  max-width: 600px;
+  width: auto;
   margin: 20px auto;
   font-family: Arial, sans-serif;
-  padding: 10px;
+  padding: 10px 0;
   box-sizing: border-box;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
+}
+
+.drop-div {
+  width: 100%;
+  max-width: 500px;
 }
 
 @keyframes fadeIn {
@@ -76,8 +80,8 @@
   width: auto;
   height: 350px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   position: relative;
   background-color: var(--c-white);
@@ -111,7 +115,7 @@
 }
 
 .controles {
-  margin-top: 10px;
+  margin: 10px 0;
   text-align: center;
 }
 
@@ -133,7 +137,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  padding-left: 2.3rem;
+  padding-left: 15px;
 }
 
 /* ✅ Responsive para pantallas pequeñas */

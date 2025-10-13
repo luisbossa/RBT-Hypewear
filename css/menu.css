@@ -1,11 +1,12 @@
 .menu-wrapper {
-  height: 400px;
+  width: 100%;
   display: none;
-  overflow: hidden;
-  transition: all 0.4s ease;
   pointer-events: none;
   opacity: 0;
+  margin-left: -2rem;
   animation: fadeIn 1s ease forwards;
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -18,8 +19,9 @@
 }
 
 .menu-wrapper.open {
-  width: 40%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: auto;
 }
 
@@ -34,16 +36,18 @@ nav {
 }
 
 nav .nav-list {
+  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
-  text-align: start;
+  text-align: left;
   flex-wrap: wrap;
   gap: 16px;
 }
 
 .hover-button,
 .submenu-item {
+  text-align: left;
   background: none;
   border: none;
   font: inherit;
@@ -81,8 +85,8 @@ nav .nav-list {
 
 .submenu {
   position: absolute;
-  top: -8px;
-  left: 95%;
+  top: -12px;
+  left: 76%;
   background: transparent;
   display: flex;
   flex-direction: column;

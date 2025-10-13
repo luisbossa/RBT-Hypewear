@@ -71,7 +71,7 @@ img {
   justify-content: start;
 }
 
-.main-div {
+.logo-div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,23 +79,11 @@ img {
   gap: 10px;
 }
 
-.logo-wrapper {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid var(--c-yellow);
-}
-
-.logo-img {
-  width: 230px;
-}
-
-.panels-wrapper {
-  width: 100%;
-  height: 680px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.logo-div h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: clamp(1.3rem, 2.5vw, 2rem); 
 }
 
 .menu-toggle-btn {
@@ -103,6 +91,30 @@ img {
   border: none;
   padding: 0;
   cursor: pointer;
+}
+
+.logo-wrapper {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--c-yellow);
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 230px; /* Tamaño máximo */
+  height: auto; /* Mantiene proporción */
+}
+
+.panels-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 nav .secondary-list {

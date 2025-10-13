@@ -1,8 +1,10 @@
+/* ========== ESTILOS GENERALES ========== */
+
 .lookbook-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 20px;
-  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
 }
@@ -15,6 +17,8 @@
     opacity: 1;
   }
 }
+
+/* Grid de miniaturas */
 
 .grid-container {
   display: grid;
@@ -37,6 +41,8 @@
   border-color: var(--c-yellow);
 }
 
+/* Detalle del lookbook */
+
 .lookbook-detalle {
   flex: 1;
   max-width: 500px;
@@ -56,8 +62,10 @@
   width: 100%;
   max-height: 450px;
   object-fit: contain;
-  background-color: #1a1a1a;
+  background-color: var(--c-blk);
 }
+
+/* Títulos y textos */
 
 .lookbook-content h4 {
   font-family: "Typewriter", sans-serif;
@@ -72,6 +80,8 @@
   line-height: 1.6;
 }
 
+/* Botón "Atrás" */
+
 .lookbook-btn-div {
   width: 100%;
   display: flex;
@@ -79,10 +89,37 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+/* ========== MEDIA QUERIES RESPONSIVE ========== */
+
+/* 🖥️ Tablets medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 80px);
+  }
+
+  .lookbook-img-div {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .lookbook-detalle img {
+    max-height: 400px;
+  }
+}
+
+/* 📱 Tablets pequeñas y móviles horizontales (hasta 800px) */
+@media (max-width: 800px) {
   .lookbook-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+
+    /* Eliminar grid */
+    grid-template-columns: unset;
+    grid-template-rows: unset;
   }
 
   .grid-container {
@@ -90,7 +127,39 @@
     grid-template-rows: repeat(4, 75px);
   }
 
+  .lookbook-img-div {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .lookbook-detalle {
+    max-width: 100%;
+  }
+
   .lookbook-detalle img {
+    width: 100%;
     max-height: 300px;
+  }
+
+  .lookbook-btn-div {
+    padding-bottom: 20px;
+  }
+}
+
+/* 📱 Móviles pequeños (hasta 500px) */
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 4px;
+  }
+
+  .lookbook-content h4 {
+    font-size: 18px;
+  }
+
+  .lookbook-content p {
+    font-size: 13px;
   }
 }
