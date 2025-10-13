@@ -1,42 +1,41 @@
-const carrusel = document.getElementById("carruselImagenes");
-const anterior = document.getElementById("anterior");
-const siguiente = document.getElementById("siguiente");
+const imgSlider = document.getElementById("img-slider-img");
+const newsBackBtn = document.getElementById("news-back");
+const newsNextBtn = document.getElementById("news-next");
 
 let indice = 0;
 const total = 3;
 
-// Función para mover el carrusel y actualizar botones
-function actualizarCarrusel() {
-  carrusel.style.transform = `translateX(-${indice * 100}%)`;
+function actualizarimgSlider() {
+  imgSlider.style.transform = `translateX(-${indice * 100}%)`;
 
   // Estado del botón izquierdo
   if (indice === 0) {
-    anterior.classList.add("disabled");
+    newsBackBtn.classList.add("disabled");
   } else {
-    anterior.classList.remove("disabled");
+    newsBackBtn.classList.remove("disabled");
   }
 
   // Estado del botón derecho
   if (indice === total - 1) {
-    siguiente.classList.add("disabled");
+    newsNextBtn.classList.add("disabled");
   } else {
-    siguiente.classList.remove("disabled");
+    newsNextBtn.classList.remove("disabled");
   }
 }
 
-// Click botón anterior
-anterior.addEventListener("click", () => {
+// Click botón newsBackBtn
+newsBackBtn.addEventListener("click", () => {
   if (indice > 0) {
     indice--;
-    actualizarCarrusel();
+    actualizarimgSlider();
   }
 });
 
-// Click botón siguiente
-siguiente.addEventListener("click", () => {
+// Click botón newsNextBtn
+newsNextBtn.addEventListener("click", () => {
   if (indice < total - 1) {
     indice++;
-    actualizarCarrusel();
+    actualizarimgSlider();
   }
 });
 
@@ -44,22 +43,22 @@ siguiente.addEventListener("click", () => {
 let inicioX = 0;
 let finX = 0;
 
-carrusel.addEventListener("touchstart", (e) => {
+imgSlider.addEventListener("touchstart", (e) => {
   inicioX = e.touches[0].clientX;
 });
 
-carrusel.addEventListener("touchend", (e) => {
+imgSlider.addEventListener("touchend", (e) => {
   finX = e.changedTouches[0].clientX;
   let diferencia = inicioX - finX;
 
   if (diferencia > 50 && indice < total - 1) {
     indice++;
-    actualizarCarrusel();
+    actualizarimgSlider();
   } else if (diferencia < -50 && indice > 0) {
     indice--;
-    actualizarCarrusel();
+    actualizarimgSlider();
   }
 });
 
 // Aplicar estado inicial al cargar
-actualizarCarrusel();
+actualizarimgSlider();

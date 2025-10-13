@@ -54,17 +54,17 @@
             </div>
 
             <div class="news-wrapper">
-                <div class="carrusel" id="carrusel">
-                    <div class="carrusel-imagenes" id="carruselImagenes">
+                <div class="img-slider" id="img-slider">
+                    <div class="img-slider-imagenes" id="img-slider-img">
                         <img src="/images/osama-1.jpg" alt="Camiseta 1">
                         <img src="/images/osama-2.webp" alt="Camiseta 2">
                         <img src="/images/osama-3.jpg" alt="Camiseta 3">
                     </div>
 
-                    <!-- Botones de navegación -->
-                    <div class="botones-carrusel">
-                        <button class="boton" id="anterior">&#10094;</button>
-                        <button class="boton" id="siguiente">&#10095;</button>
+                    <!-- Next / back buttons -->
+                    <div class="img-slider-div">
+                        <button class="news-button" id="news-back">&#10094;</button>
+                        <button class="news-button" id="news-next">&#10095;</button>
                     </div>
                 </div>
 
@@ -134,7 +134,7 @@
                 </div>
             </section>
 
-            <!-- Carrusel dinámico -->
+            <!-- Image toggle dinámico -->
             <div class="drop-img-toggle" id="drop-img-toggle">
                 <div class="imagenes"><!-- Dinámic data --></div>
                 <div class="drop-content">
@@ -311,9 +311,8 @@
                     </a>
                 </li>
             </ul>
+            <h2 class="footer-date">XX/XX/XXXX</h2>
         </nav>
-
-        <h2 class="footer-date">XX/XX/XXXX</h2>
     </div>
 
     <script src="/js/menu.js"></script>

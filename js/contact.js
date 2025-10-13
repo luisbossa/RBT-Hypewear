@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
   });
 
   // Validación básica
-  form.querySelectorAll("input, textarea").forEach((field) => {
+  form.querySelectorAll("input, textarea, custom-dropdown").forEach((field) => {
     if (!field.value.trim()) {
       valid = false;
       field.nextElementSibling.textContent = "Este campo es obligatorio";

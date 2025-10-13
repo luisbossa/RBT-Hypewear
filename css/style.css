@@ -26,10 +26,6 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: hidden;
-}
-
 body {
   color: var(--c-white);
   background-color: var(--c-blk);
@@ -68,7 +64,7 @@ img {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 3rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,5 +136,6 @@ nav .secondary-list {
 
 .footer-date {
   font-size: 20px;
+  margin-top: 1.5rem;
   color: var(--c-yellow);
 }

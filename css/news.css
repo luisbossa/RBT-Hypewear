@@ -1,5 +1,5 @@
 .news-wrapper {
-  width: 100%;
+  width: auto;
   height: 550px;
   margin: auto;
   display: flex;
@@ -9,6 +9,11 @@
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
+
+  /* overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch; */
 }
 
 @keyframes fadeIn {
@@ -20,23 +25,23 @@
   }
 }
 
-.carrusel {
+.img-slider {
   width: 400px;
   position: relative;
   overflow: hidden;
 }
 
-.carrusel-imagenes {
+.img-slider-imagenes {
   display: flex;
   transition: transform 0.4s ease;
 }
 
-.carrusel img {
+.img-slider img {
   width: 100%;
   object-fit: cover;
 }
 
-.botones-carrusel {
+.img-slider-div {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -46,7 +51,7 @@
   padding: 0 10px;
 }
 
-.boton {
+.news-button {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -55,7 +60,7 @@
   border-radius: 50%;
 }
 
-.boton:hover {
+.news-button:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -66,7 +71,7 @@
 
 .news-content h4 {
   font-family: "Typewriter", sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .news-content p {
@@ -96,15 +101,39 @@
   color: var(--c-yellow);
 }
 
-.boton.disabled {
+.news-button.disabled {
   background: rgba(0, 0, 0, 0.2);
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.4;
 }
 
-@media (max-width: 600px) {
-  .boton {
+@media (max-width: 690px) {
+  .news-wrapper {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .img-slider {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .news-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .news-button {
     padding: 8px;
+  }
+
+  .img-slider-div {
+    padding: 0 5px;
   }
 }
