@@ -1,21 +1,36 @@
-.rubik-container {
+.drop-section {
   width: 100%;
   max-width: 550px;
   display: none;
   margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.drop-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
+  padding: 20px 20px 15px 20px;
   gap: 2px;
 }
 
-.rubik-cell {
+.drop-cell {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background-color: #111;
 }
 
-.rubik-cell button {
+.drop-cell button {
   background: none;
   border: none;
   padding: 0;
@@ -24,26 +39,37 @@
   height: 100%;
 }
 
-.rubik-cell img {
+.drop-cell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.rubik-cell button:hover img {
+.drop-cell button:hover img {
   transform: scale(1.05);
 }
 
-/*---------- RUBIK SLIDER ------------*/
+/*---------- drop SLIDER ------------*/
 
-.carrusel-2 {
+.drop-img-toggle {
   width: 100%;
   max-width: 600px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
   padding: 10px;
   box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .imagenes {
@@ -68,20 +94,19 @@
   display: block;
 }
 
-.rubik-content {
+.drop-content {
   width: 100%;
   padding: 20px 20px 0 20px;
 }
 
-.rubik-content h4 {
+.drop-content h4 {
   font-family: "Typewriter", sans-serif;
   margin-bottom: 10px;
 }
 
-.rubik-content p {
+.drop-content p {
   font-family: "Typewriter", sans-serif;
   font-size: 14px;
-  margin-bottom: 20px;
   line-height: 1.6;
 }
 
@@ -101,6 +126,14 @@
   text-underline-offset: 4px;
   border: 1px solid var(--c-blk);
   cursor: pointer;
+}
+
+.drop-btn-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 2.3rem;
 }
 
 /* ✅ Responsive para pantallas pequeñas */

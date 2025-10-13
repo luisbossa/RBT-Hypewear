@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const carrusel2 = document.getElementById("carrusel-2");
-  const rubikButtons = document.querySelectorAll("#rubik button");
-  const imagenesContainer = carrusel2.querySelector(".imagenes");
-  const tituloElem = carrusel2.querySelector("#rubik-titulo");
-  const textoElem = carrusel2.querySelector("#rubik-texto");
-  const frontalBtn = carrusel2.querySelector(".btn.frontal");
-  const posteriorBtn = carrusel2.querySelector(".btn.posterior");
+  const toggleSection = document.getElementById("drop-img-toggle");
+  const dropButtons = document.querySelectorAll("#drop button");
+  const imagenesContainer = toggleSection.querySelector(".imagenes");
+  const tituloElem = toggleSection.querySelector("#drop-titulo");
+  const textoElem = toggleSection.querySelector("#drop-texto");
+  const frontalBtn = toggleSection.querySelector(".btn.frontal");
+  const posteriorBtn = toggleSection.querySelector(".btn.posterior");
 
   const data = {
     1: {
@@ -99,12 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function imgToggle() {
-    if (rubik) rubik.style.display = "none";
-    if (carrusel2) carrusel2.style.display = "block";
+    if (drop) drop.style.display = "none";
+    if (toggleSection) toggleSection.style.display = "block";
   }
 
-  // Activar desde rubik
-  rubikButtons.forEach((btn, i) => {
+  // Activar desde drop
+  dropButtons.forEach((btn, i) => {
     btn.addEventListener("click", () => {
       const index = i + 1;
       loadingImgToggle(index);

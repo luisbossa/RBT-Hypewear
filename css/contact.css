@@ -5,6 +5,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .contact-container {
@@ -49,22 +60,58 @@ textarea {
   resize: none;
 }
 
-.form-select {
+.custom-dropdown {
+  position: relative;
+    color: #838383;
+  font-size: 14px;
+  font-family: "Typewriter", sans-serif;
+}
+
+.dropdown-selected {
+  border: 1px solid #767676;
+  background-color: #fff;
+  padding: 8px 32px 8px 10px;
+  cursor: pointer;
   position: relative;
 }
 
-.form-select select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: #fff;
-  cursor: pointer;
+.dropdown-caret {
+  position: absolute;
+  top: 38%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
-.form-select svg {
+.dropdown-options {
+  width: 100%;
+  list-style: none;
+  background-color: var(--c-white);
+  border: 1px solid #767676;
+  border-top: none;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 1px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  z-index: 10;
+}
+
+.custom-dropdown.open .dropdown-options {
+  max-height: 300px; 
+  opacity: 1;
+}
+
+.dropdown-options li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+.dropdown-options li:hover {
+  color: var(--c-white);
+  background-color: var(--c-blk);
 }
 
 .btn-submit {
@@ -114,8 +161,8 @@ textarea {
   width: 300px;
   max-width: 80%;
   padding: 2rem 1.5rem;
-  position: fixed; /* mejor que absolute para centrar */
-  top: 50%;
+  position: fixed;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%) translateY(20px);
   background-color: var(--c-white);

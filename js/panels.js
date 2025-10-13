@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("js-loaded");
 
-  const menuToggle = document.querySelector(".menu-toggle");
+  const menuToggle = document.querySelector(".menu-toggle-btn");
   const menuWrapper = document.querySelector(".menu-wrapper");
-  const panelWrapper = document.querySelector(".panel-wrapper");
+  const panelWrapper = document.querySelector(".panels-wrapper");
 
   const sections = {
     noticias: document.querySelector(".news-wrapper"),
-    preview: document.querySelector(".rubik-container"),
+    preview: document.querySelector(".drop-section"),
     lookbook: document.getElementById("lookbook"),
     videos: document.getElementById("video-section"),
     about: document.getElementById("about-section"),
     contact: document.getElementById("contact-section"),
-    carrusel2: document.getElementById("carrusel-2"),
+    imgToggle: document.getElementById("drop-img-toggle"),
   };
 
   const buttons = {
@@ -135,13 +135,13 @@ document.addEventListener("DOMContentLoaded", () => {
     btnBack2.addEventListener("click", (e) => {
       e.preventDefault();
       ocultarTodo();
-      if (rubik) rubik.style.display = "none";
+      if (drop) drop.style.display = "none";
       menuWrapper.classList.add("open");
     });
 
   btnBack3.addEventListener("click", (e) => {
     e.preventDefault();
-    if (sections.carrusel2) sections.carrusel2.style.display = "none";
+    if (sections.imgToggle) sections.imgToggle.style.display = "none";
     if (sections.preview) sections.preview.style.display = "grid";
   });
 

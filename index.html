@@ -7,8 +7,9 @@
     <title>RBT vintage</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/news.css">
-    <link rel="stylesheet" href="/css/rubik.css">
+    <link rel="stylesheet" href="/css/drop.css">
     <link rel="stylesheet" href="/css/lookbook.css">
     <link rel="stylesheet" href="/css/videos.css">
     <link rel="stylesheet" href="/css/about.css">
@@ -20,7 +21,7 @@
     <div class="main-wrapper">
 
         <div class="main-div">
-            <button class="menu-toggle" aria-label="Toggle Menu">
+            <button class="menu-toggle-btn" aria-label="Toggle Menu">
                 <div class="logo-wrapper">
                     <img class="logo-img" src="/images/logo.png" alt="Logo RBT">
                 </div>
@@ -30,7 +31,7 @@
         </div>
 
 
-        <main class="panel-wrapper">
+        <main class="panels-wrapper">
             <div class="menu-wrapper">
                 <nav class="nav-main">
                     <ul class="nav-list">
@@ -42,7 +43,7 @@
                             <div class="submenu" id="submenu">
                                 <button class="submenu-item">Ropa</button>
                                 <button class="submenu-item">Accesorios</button>
-                                <button class="submenu-item">Decs</button>
+                                <button class="submenu-item">Decks</button>
                             </div>
                         </li>
                         <li><button id="btn-videos" class="hover-button">Videos</button></li>
@@ -79,63 +80,66 @@
                 </div>
             </div>
 
+            <section id="drop" class="drop-section">
+                <div class="drop-container">
+                    <div class="drop-cell" data-index="1">
+                        <button>
+                            <img src="/images/preview/coat-1.webp" alt="RBT Noodles 1">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="2">
+                        <button>
+                            <img src="/images/preview/coat-2.webp" alt="RBT Chopsticks">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="3">
+                        <button>
+                            <img src="/images/preview/coat-3.webp" alt="RBT Bowl">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="4">
+                        <button>
+                            <img src="/images/preview/coat-4.webp" alt="RBT Plate">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="5">
+                        <button>
+                            <img src="/images/preview/coat-5.webp" alt="RBT Sake">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="6">
+                        <button>
+                            <img src="/images/preview/coat-6.webp" alt="RBT Cups">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="7">
+                        <button>
+                            <img src="/images/preview/coat-7.webp" alt="RBT Thermos">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="8">
+                        <button>
+                            <img src="/images/preview/coat-8.webp" alt="RBT Mug Set">
+                        </button>
+                    </div>
+                    <div class="drop-cell" data-index="9">
+                        <button>
+                            <img src="/images/preview/coat-9.webp" alt="RBT Tupperware">
+                        </button>
+                    </div>
+                </div>
 
-            <div id="rubik" class="rubik-container">
-                <div class="rubik-cell" data-index="1">
-                    <button>
-                        <img src="/images/preview/coat-1.webp" alt="RBT Noodles 1">
-                    </button>
+                <div class="drop-btn-div">
+                    <a id="btn-back2" class="btn-back">Atrás</a>
                 </div>
-                <div class="rubik-cell" data-index="2">
-                    <button>
-                        <img src="/images/preview/coat-2.webp" alt="RBT Chopsticks">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="3">
-                    <button>
-                        <img src="/images/preview/coat-3.webp" alt="RBT Bowl">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="4">
-                    <button>
-                        <img src="/images/preview/coat-4.webp" alt="RBT Plate">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="5">
-                    <button>
-                        <img src="/images/preview/coat-5.webp" alt="RBT Sake">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="6">
-                    <button>
-                        <img src="/images/preview/coat-6.webp" alt="RBT Cups">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="7">
-                    <button>
-                        <img src="/images/preview/coat-7.webp" alt="RBT Thermos">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="8">
-                    <button>
-                        <img src="/images/preview/coat-8.webp" alt="RBT Mug Set">
-                    </button>
-                </div>
-                <div class="rubik-cell" data-index="9">
-                    <button>
-                        <img src="/images/preview/coat-9.webp" alt="RBT Tupperware">
-                    </button>
-                </div>
-
-                <a id="btn-back2" class="btn-back">Atrás</a>
-            </div>
+            </section>
 
             <!-- Carrusel dinámico -->
-            <div class="carrusel-2" id="carrusel-2">
+            <div class="drop-img-toggle" id="drop-img-toggle">
                 <div class="imagenes"><!-- Dinámic data --></div>
-                <div class="rubik-content">
-                    <h4 id="rubik-titulo"><!-- Dinámic data --></h4>
-                    <p id="rubik-texto"><!-- Dinámic data --></p>
+                <div class="drop-content">
+                    <h4 id="drop-titulo"><!-- Dinámic data --></h4>
+                    <p id="drop-texto"><!-- Dinámic data --></p>
                 </div>
                 <div class="controles">
                     <button class="btn frontal">Frontal</button>
@@ -230,19 +234,22 @@
                             <span class="error-msg"></span>
                         </div>
 
-                        <div class="form-group form-select">
-                            <select name="subject" required>
-                                <option value="">Selecciona un motivo</option>
-                                <option value="colaboraciones">Colaboraciones</option>
-                                <option value="general">Consulta general</option>
-                                <option value="eventos">Eventos o patrocinios</option>
-                            </select>
-                            <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                aria-label="Dropdown caret" role="img">
+                        <div class="form-group custom-dropdown">
+                            <div class="dropdown-selected">Selecciona un motivo</div>
+                            <svg class="dropdown-caret" width="7" height="6" viewBox="0 0 7 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-label="Dropdown caret" role="img">
                                 <path d="M3.5 5.2L0.04 0.4h6.92L3.5 5.2z" fill="#000"></path>
                             </svg>
+                            <ul class="dropdown-options">
+                                <li data-value="colaboraciones">Colaboraciones</li>
+                                <li data-value="general">Consulta general</li>
+                                <li data-value="eventos">Eventos o patrocinios</li>
+                            </ul>
+                            <!-- Hidden input to store the selected value for form submission -->
+                            <input type="hidden" name="subject" required>
                             <span class="error-msg"></span>
                         </div>
+
 
                         <div class="form-group">
                             <textarea name="message" placeholder="Mensaje" rows="6" required></textarea>
@@ -269,9 +276,15 @@
 
         <nav class="nav-secondary">
             <ul class="secondary-list">
-                <li><button id="btn-menu-footer" class="hover-button" href="#">Menú</button></li>
-                <li><button class="hover-button" href="#">Privacidad</button></li>
-                <li><button class="hover-button" href="#">FAQ</button></li>
+                <li>
+                    <button id="btn-menu-footer" class="hover-button">Menú</button>
+                </li>
+                <li>
+                    <button class="hover-button">Privacidad</button>
+                </li>
+                <li>
+                    <button class="hover-button">FAQ</button>
+                </li>
             </ul>
 
             <ul class="social-list">
@@ -303,6 +316,7 @@
         <h2 class="footer-date">XX/XX/XXXX</h2>
     </div>
 
+    <script src="/js/menu.js"></script>
     <script src="/js/submenu.js"></script>
     <script src="/js/panels.js"></script>
     <script src="js/slider.js"></script>
@@ -310,7 +324,7 @@
     <script src="js/lookbook.js"></script>
     <script src="js/videos.js"></script>
     <script src="js/contact.js"></script>
-    <script src="js/date.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
