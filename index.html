@@ -135,9 +135,9 @@
             </section>
 
             <!-- Image dinamic toggle -->
-            <div class="drop-img-toggle" id="drop-img-toggle">
+            <section class="drop-img-toggle" id="drop-img-toggle">
                 <div class="drop-div">
-                    <div class="imagenes"><!-- Dinámic data --></div>
+                    <div class="drop-imgs"><!-- Dinámic data --></div>
                     <div class="drop-content">
                         <h4 id="drop-titulo"><!-- Dinámic data --></h4>
                         <p id="drop-texto"><!-- Dinámic data --></p>
@@ -151,9 +151,10 @@
                         <a id="btn-back3" class="btn-back">Atrás</a>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="lookbook" class="lookbook-container">
+            <!-- Lookbook section -->
+            <section id="lookbook" class="lookbook-container">
                 <div class="grid-container" id="miniaturas"></div>
 
                 <div class="lookbook-detalle">
@@ -169,11 +170,10 @@
                 <div class="lookbook-btn-div">
                     <a id="btn-back4" class="btn-back">Atrás</a>
                 </div>
-            </div>
+            </section>
 
-
-
-            <div id="video-section" class="video-section">
+            <!-- Video section -->
+            <section id="video-section" class="video-section">
                 <div class="video-container">
                     <video id="custom-video" src="/videos/video-1.mp4" title="DAMN - Video by Alex"
                         poster="/images/video-cover.jpg" preload="metadata" controls muted>
@@ -205,8 +205,10 @@
                     </div>
                     <a id="btn-back5" class="btn-back">Atrás</a>
                 </div>
-            </div>
+            </section>
 
+
+            <!-- About section -->
             <section id="about-section" class="about-section">
                 <div class="about-container">
                     <h4 class="about-title">Sobre RBT</h4>
@@ -235,7 +237,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Correo electrónico" required />
+                            <input type="email" name="email" placeholder="Correo electrónico" autocomplete="email" required />
                             <span class="error-msg"></span>
                         </div>
 

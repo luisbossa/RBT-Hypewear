@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggleSection = document.getElementById("drop-img-toggle");
   const dropButtons = document.querySelectorAll("#drop button");
-  const imagenesContainer = toggleSection.querySelector(".imagenes");
+  const imagenesContainer = toggleSection.querySelector(".drop-imgs");
   const tituloElem = toggleSection.querySelector("#drop-titulo");
   const textoElem = toggleSection.querySelector("#drop-texto");
   const frontalBtn = toggleSection.querySelector(".btn.frontal");
