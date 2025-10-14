@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("js-loaded");
-
   const menuToggle = document.querySelector(".menu-toggle-btn");
   const menuWrapper = document.querySelector(".menu-wrapper");
   const panelWrapper = document.querySelector(".panels-wrapper");

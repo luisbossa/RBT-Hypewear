@@ -115,8 +115,9 @@ video,
 .btn-back {
   display: inline-block;
   font-size: 14px;
-  text-decoration: underline;
   color: var(--c-white);
+  text-decoration: underline;
+  text-decoration-color: var(--c-yellow);
   margin-top: 10px;
   cursor: pointer;
 }

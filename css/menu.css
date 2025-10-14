@@ -86,7 +86,7 @@ nav .nav-list {
 .submenu {
   position: absolute;
   top: -12px;
-  left: 76%;
+  left: 85%;
   background: transparent;
   display: flex;
   flex-direction: column;

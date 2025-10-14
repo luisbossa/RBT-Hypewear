@@ -9,55 +9,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const data = {
     1: {
-      titulo: "Abrigo RBT Modelo 1",
+      titulo: "Abrigo poder eléctrico",
       texto:
-        "Este abrigo es perfecto para el invierno frío y tiene un diseño clásico de Rats Boys T-shirts.",
-      imagenes: ["/images/preview/coat-1.webp", "/images/preview/coat-2.webp"],
+        "Este abrigo es perfecto para el invierno frío y tiene un diseño electrico.",
+      imagenes: ["/images/drop/coat-1.avif", "/images/drop/coat-1.1.avif"],
     },
     2: {
-      titulo: "Abrigo RBT Modelo 2",
+      titulo: "Abrigo RBT moderno",
       texto:
         "Abrigo con corte moderno, cómodo y resistente, ideal para uso diario.",
-      imagenes: ["/images/preview/coat-2.webp", "/images/preview/coat-3.webp"],
+      imagenes: ["/images/drop/coat-2.png", "/images/drop/coat-2.2.png"],
     },
     3: {
-      titulo: "Abrigo RBT Modelo 3",
+      titulo: "Abrigo RBT Vintage",
       texto: "Diseño vintage con materiales ecológicos y acabado premium.",
-      imagenes: ["/images/preview/coat-3.webp", "/images/preview/coat-4.webp"],
+      imagenes: ["/images/drop/coat-3.jpg", "/images/drop/coat-3.3.jpg"],
     },
     4: {
-      titulo: "Abrigo RBT Modelo 4",
+      titulo: "Abrigo RBT fortaleza térmica",
       texto:
         "Modelo con aislamiento térmico reforzado, ideal para climas extremos.",
-      imagenes: ["/images/preview/coat-4.webp", "/images/preview/coat-5.webp"],
+      imagenes: ["/images/drop/coat-4.webp", "/images/drop/coat-4.4.webp"],
     },
     5: {
-      titulo: "Abrigo RBT Modelo 5",
-      texto: "Diseño urbano con bolsillos funcionales y capucha ajustable.",
-      imagenes: ["/images/preview/coat-5.webp", "/images/preview/coat-6.webp"],
+      titulo: "Abrigo RBT Urbano",
+      texto: "Diseño urbano con bolsillos funcionales y personalizado.",
+      imagenes: ["/images/drop/coat-5.webp", "/images/drop/coat-5.5.webp"],
     },
     6: {
-      titulo: "Abrigo RBT Modelo 6",
-      texto: "Abrigo con tecnología impermeable y detalles reflectantes.",
-      imagenes: ["/images/preview/coat-6.webp", "/images/preview/coat-7.webp"],
+      titulo: "Abrigo RBT Denim Revival",
+      texto:
+        "Abrigo vintage confeccionado a partir de retazos de jeans grises.",
+      imagenes: ["/images/drop/coat-6.webp", "/images/drop/coat-6.6.webp"],
     },
     7: {
-      titulo: "Abrigo RBT Modelo 7",
+      titulo: "Abrigo RBT Minimal",
       texto:
         "Estilo minimalista con detalles técnicos y materiales reciclados.",
-      imagenes: ["/images/preview/coat-7.webp", "/images/preview/coat-8.webp"],
+      imagenes: ["/images/drop/coat-7.webp", "/images/drop/coat-7.7.webp"],
     },
     8: {
-      titulo: "Abrigo RBT Modelo 8",
+      titulo: "Abrigo RBT Polar",
       texto:
-        "Inspirado en el diseño militar, con múltiples bolsillos y estructura robusta.",
-      imagenes: ["/images/preview/coat-8.webp", "/images/preview/coat-9.webp"],
+        "Inspirado en el diseño polar, con múltiples bolsillos y estructura robusta.",
+      imagenes: ["/images/drop/coat-8.webp", "/images/drop/coat-8.8.webp"],
     },
     9: {
-      titulo: "Abrigo RBT Modelo 9",
-      texto:
-        "Con forro polar interior y cierres magnéticos, ideal para el día a día.",
-      imagenes: ["/images/preview/coat-9.webp", "/images/preview/coat-1.webp"],
+      titulo: "Abrigo RBT Místico",
+      texto: "Abrigo con estampado místico, ideal para el día a día.",
+      imagenes: ["/images/drop/coat-9.jpg", "/images/drop/coat-9.9.jpg"],
     },
   };
 

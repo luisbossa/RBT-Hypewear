@@ -1,7 +1,7 @@
 const modelos = [
   {
     titulo: "Modelo 1",
-    descripcion: "Chaqueta negra oversize.",
+    descripcion: "Chaqueta negra floreada.",
     imagen: "/images/lookbook/look-1.jpg",
   },
   {
@@ -11,32 +11,32 @@ const modelos = [
   },
   {
     titulo: "Modelo 3",
-    descripcion: "Camisa de cuadros otoño.",
+    descripcion: "Conjunto blanco básico.",
     imagen: "/images/lookbook/look-3.jpg",
   },
   {
     titulo: "Modelo 4",
-    descripcion: "Estilo streetwear urbano.",
+    descripcion: "Estilo streetwear rasta.",
     imagen: "/images/lookbook/look-4.jpg",
   },
   {
     titulo: "Modelo 5",
-    descripcion: "Sudadera blanca con logo.",
+    descripcion: "Sudadera blanca lisa.",
     imagen: "/images/lookbook/look-5.jpg",
   },
   {
     titulo: "Modelo 6",
-    descripcion: "Outfit casual beige.",
+    descripcion: "Outfit casual de cuadros.",
     imagen: "/images/lookbook/look-6.jpg",
   },
   {
     titulo: "Modelo 7",
-    descripcion: "Gorra + chaqueta bomber.",
+    descripcion: "Chaqueta bomber de flores.",
     imagen: "/images/lookbook/look-7.jpg",
   },
   {
     titulo: "Modelo 8",
-    descripcion: "Look monocromático blanco.",
+    descripcion: "Look ruso moderno.",
     imagen: "/images/lookbook/look-8.jpg",
   },
   {
@@ -46,7 +46,7 @@ const modelos = [
   },
   {
     titulo: "Modelo 10",
-    descripcion: "Look relajado con mochila.",
+    descripcion: "Look relajado con camuflaje.",
     imagen: "/images/lookbook/look-10.jpg",
   },
   {
@@ -71,7 +71,7 @@ const modelos = [
   },
   {
     titulo: "Modelo 15",
-    descripcion: "Cazadora con capucha.",
+    descripcion: "Camiseta con manchas coloridas.",
     imagen: "/images/lookbook/look-15.jpg",
   },
   {

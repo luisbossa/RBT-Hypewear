@@ -1,10 +1,8 @@
-/* ========== ESTILOS GENERALES ========== */
-
 .lookbook-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 20px;
-  padding: 20px 0;
+  margin-top: 20px;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
 }
@@ -140,10 +138,6 @@
   .lookbook-detalle img {
     width: 100%;
     max-height: 300px;
-  }
-
-  .lookbook-btn-div {
-    padding-bottom: 20px;
   }
 }
 
