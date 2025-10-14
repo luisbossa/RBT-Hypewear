@@ -135,14 +135,12 @@ textarea {
   border-bottom: 1px solid var(--c-yellow);
 }
 
-/* Agrupación de inputs con mensaje de error */
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
-/* Mensajes de error */
 .error-msg {
   color: rgb(197, 48, 48);
   font-size: 13px;
@@ -152,12 +150,10 @@ textarea {
   transition: opacity 0.4s ease;
 }
 
-/* Cuando se activa el mensaje de error */
 .error-msg.show {
   opacity: 1;
 }
 
-/* Mensaje de éxito */
 .success-message {
   width: 300px;
   max-width: 80%;

@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (toggleSection) toggleSection.style.display = "block";
   }
 
-  // Activar desde drop
   dropButtons.forEach((btn, i) => {
     btn.addEventListener("click", () => {
       const index = i + 1;

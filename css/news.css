@@ -9,11 +9,6 @@
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
-
-  /* overflow-y: auto;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch; */
 }
 
 @keyframes fadeIn {

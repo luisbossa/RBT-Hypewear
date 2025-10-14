@@ -102,8 +102,6 @@ function generarMiniaturas() {
     img.addEventListener("click", () => mostrarModelo(index));
     miniaturas.appendChild(img);
   });
-
-  // Mostrar el primero por defecto
   mostrarModelo(0);
 }
 

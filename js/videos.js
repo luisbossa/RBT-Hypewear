@@ -9,7 +9,7 @@ audio.preload = "metadata";
 
 let hideTimeout;
 let customButtonUsed = false;
-let isUserInteracting = false; // Nueva bandera para controlar interacción y evitar conflicto
+let isUserInteracting = false;
 
 function showAndAutoHideButton() {
   playBtn.classList.remove("fade-out");
@@ -46,7 +46,6 @@ playBtn.addEventListener("click", () => {
   }
   showAndAutoHideButton();
 
-  // Reseteamos la interacción tras breve delay para evitar conflicto con eventos play/pause
   setTimeout(() => {
     isUserInteracting = false;
   }, 100);
@@ -91,7 +90,6 @@ video.addEventListener("ended", () => {
   }
 });
 
-// Click en el video para pausar/reproducir y mostrar botón central
 video.addEventListener("click", () => {
   customButtonUsed = true;
   isUserInteracting = true;

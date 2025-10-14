@@ -37,7 +37,6 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-
 document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
     const selected = dropdown.querySelector(".dropdown-selected");
     const options = dropdown.querySelector(".dropdown-options");
