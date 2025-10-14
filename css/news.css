@@ -50,7 +50,7 @@
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 11px 16px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -122,10 +122,6 @@
     max-width: 400px;
     padding: 0 10px;
     text-align: center;
-  }
-
-  .news-button {
-    padding: 8px;
   }
 
   .img-slider-div {
