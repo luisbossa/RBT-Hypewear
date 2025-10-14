@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   submenu.addEventListener("click", (e) => {
-    e.stopPropagation(); // Evita que se cierre al hacer clic dentro
+    e.stopPropagation();
   });
 });
