@@ -116,6 +116,7 @@
     height: auto;
     align-items: center;
     padding: 20px 0;
+    gap: 14px;
   }
 
   .img-slider {
