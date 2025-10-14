@@ -144,16 +144,11 @@ video,
     aspect-ratio: 16 / 9;
   }
 
-  .video-info h2 {
-    font-size: 18px;
-  }
-
   .video-info p {
     font-size: 13px;
   }
 
   .video-btn {
-    font-size: 12px;
     padding: 8px 14px;
   }
 
@@ -172,16 +167,11 @@ video,
     padding: 0 10px;
   }
 
-  .video-info h2 {
-    font-size: 16px;
-  }
-
   .video-info p {
     font-size: 12px;
   }
 
   .video-btn {
-    font-size: 11px;
     padding: 6px 12px;
   }
 
