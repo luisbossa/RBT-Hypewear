@@ -27,7 +27,7 @@
 }
 
 .contact-title {
-  font-size: 1.2rem;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -48,7 +48,7 @@ input,
 textarea,
 select {
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
   padding: 8px 7px;
   font-family: inherit;
   outline: none;
@@ -63,7 +63,7 @@ textarea {
 .custom-dropdown {
   position: relative;
   color: #838383;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Typewriter", sans-serif;
 }
 
@@ -144,7 +144,7 @@ textarea {
 
 .error-msg {
   color: rgb(197, 48, 48);
-  font-size: 13px;
+  font-size: 12px;
   font-family: "Typewriter", sans-serif;
   height: 14px;
   opacity: 0;
