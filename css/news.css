@@ -47,6 +47,7 @@
 }
 
 .news-button {
+  font-family: "SplendidI", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
