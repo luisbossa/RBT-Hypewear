@@ -61,8 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  let currentIndex = 0;
-
   function loadingImgToggle(index) {
     const item = data[index];
     if (!item) return;

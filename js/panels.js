@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.querySelector(".menu-toggle-btn");
   const menuWrapper = document.querySelector(".menu-wrapper");
   const panelWrapper = document.querySelector(".panels-wrapper");
 
@@ -11,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     about: document.getElementById("about-section"),
     contact: document.getElementById("contact-section"),
     imgToggle: document.getElementById("drop-img-toggle"),
+    privacy: document.getElementById("privacy-panel"),
+    faq: document.getElementById("faq-panel"),
   };
 
   const buttons = {
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     about: document.getElementById("btn-about"),
     contact: document.getElementById("btn-contact"),
     menu: document.getElementById("btn-menu-footer"),
+    privacy: document.getElementById("privacy-btn"),
+    faq: document.getElementById("faq-btn"),
   };
 
   const backButtons = {
@@ -31,9 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnBack5: document.getElementById("btn-back5"),
     btnBack6: document.getElementById("btn-back6"),
     btnBack7: document.getElementById("btn-back7"),
+    btnBack8: document.getElementById("btn-back8"),
+    btnBack9: document.getElementById("btn-back9"),
   };
 
-  // Ocultar todas las secciones
   function ocultarTodo() {
     Object.values(sections).forEach((el) => {
       if (el) el.style.display = "none";
@@ -41,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (menuWrapper) menuWrapper.classList.remove("open");
   }
 
-  // Mostrar una sección específica
   function mostrarSeccion(nombre, tipo = "flex") {
     if (!sections[nombre]) return;
     ocultarTodo();
@@ -52,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sections[nombre].style.display = tipo;
   }
 
-  // Inicialización
   ocultarTodo();
   if (panelWrapper) {
     panelWrapper.style.opacity = "0";
@@ -60,19 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
     panelWrapper.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
   }
 
-  // Evento para mostrar menú al hacer click en el logo
-  if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
-      if (panelWrapper) {
-        panelWrapper.style.opacity = "1";
-        panelWrapper.style.visibility = "visible";
-      }
-      ocultarTodo();
-      menuWrapper.classList.add("open");
-    });
+  if (menuWrapper) {
+    menuWrapper.classList.add("open");
+    if (panelWrapper) {
+      panelWrapper.style.opacity = "1";
+      panelWrapper.style.visibility = "visible";
+    }
   }
 
-  // Eventos para botones de navegación
   if (buttons.menu) {
     buttons.menu.addEventListener("click", () => {
       if (panelWrapper) {
@@ -108,10 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.contact.addEventListener("click", () =>
       mostrarSeccion("contact", "flex")
     );
+  if (buttons.privacy)
+    buttons.privacy.addEventListener("click", () =>
+      mostrarSeccion("privacy", "flex")
+    );
+  if (buttons.faq)
+    buttons.faq.addEventListener("click", () => mostrarSeccion("faq", ""));
 
-  // -----------------------
-  // BOTONES DE "VOLVER" (sin modificar)
-  // -----------------------
   const {
     btnBack,
     btnBack2,
@@ -120,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btnBack5,
     btnBack6,
     btnBack7,
+    btnBack8,
+    btnBack9,
   } = backButtons;
 
   if (btnBack)
@@ -164,6 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
   btnBack7.addEventListener("click", (e) => {
     e.preventDefault();
     sections.contact.style.display = "none";
+    menuWrapper.classList.add("open");
+  });
+
+  btnBack8.addEventListener("click", (e) => {
+    e.preventDefault();
+    sections.privacy.style.display = "none";
+    menuWrapper.classList.add("open");
+  });
+
+  btnBack9.addEventListener("click", (e) => {
+    e.preventDefault();
+    sections.faq.style.display = "none";
     menuWrapper.classList.add("open");
   });
 });

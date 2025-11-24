@@ -8,14 +8,12 @@ const total = 3;
 function actualizarimgSlider() {
   imgSlider.style.transform = `translateX(-${indice * 100}%)`;
 
-  // Estado del botón izquierdo
   if (indice === 0) {
     newsBackBtn.classList.add("disabled");
   } else {
     newsBackBtn.classList.remove("disabled");
   }
 
-  // Estado del botón derecho
   if (indice === total - 1) {
     newsNextBtn.classList.add("disabled");
   } else {
@@ -23,7 +21,6 @@ function actualizarimgSlider() {
   }
 }
 
-// Click botón newsBackBtn
 newsBackBtn.addEventListener("click", () => {
   if (indice > 0) {
     indice--;
@@ -31,7 +28,6 @@ newsBackBtn.addEventListener("click", () => {
   }
 });
 
-// Click botón newsNextBtn
 newsNextBtn.addEventListener("click", () => {
   if (indice < total - 1) {
     indice++;
@@ -39,7 +35,6 @@ newsNextBtn.addEventListener("click", () => {
   }
 });
 
-// Swipe en móviles
 let inicioX = 0;
 let finX = 0;
 
@@ -60,5 +55,4 @@ imgSlider.addEventListener("touchend", (e) => {
   }
 });
 
-// Aplicar estado inicial al cargar
 actualizarimgSlider();

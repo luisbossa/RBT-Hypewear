@@ -28,7 +28,7 @@ function showAndAutoHideButton() {
 
 playBtn.addEventListener("click", () => {
   customButtonUsed = true;
-  isUserInteracting = true; // Empieza interacción
+  isUserInteracting = true; 
 
   if (video.paused) {
     video.play();

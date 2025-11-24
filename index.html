@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/css/videos.css">
     <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/privacy.css">
+    <link rel="stylesheet" href="/css/faq.css">
 </head>
 
 <body>
@@ -237,7 +239,8 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Correo electrónico" autocomplete="email" required />
+                            <input type="email" name="email" placeholder="Correo electrónico" autocomplete="email"
+                                required />
                             <span class="error-msg"></span>
                         </div>
 
@@ -252,7 +255,7 @@
                                 <li data-value="general">Consulta general</li>
                                 <li data-value="eventos">Eventos o patrocinios</li>
                             </ul>
-                            <!-- Hidden input to store the selected value for form submission -->
+
                             <input type="hidden" name="subject" required>
                             <span class="error-msg"></span>
                         </div>
@@ -266,7 +269,6 @@
                         <input type="submit" value="Enviar" class="btn-submit" />
                     </form>
 
-                    <!-- Mensaje de éxito -->
                     <div class="success-message" id="successMessage">
                         <img src="/images/vomitada.png" alt="Enviado" />
                         <div class="msm-div">
@@ -279,6 +281,70 @@
                     <a id="btn-back7" class="btn-back">Atrás</a>
                 </div>
             </section>
+
+            <section id="privacy-panel" class="privacy-section">
+                <div class="privacy-container">
+                    <h4 class="privacy-title">Normas de Privacidad</h4>
+                    <p>Nos importa tu privacidad y queremos que tengas la mejor experiencia de compra posible. Aquí te
+                        explicamos cómo manejamos tu
+                        información personal y nuestras políticas de devoluciones.</p>
+
+                    <h5>1. Datos Personales</h5>
+                    <p>Recopilamos información personal como tu nombre, dirección de envío, correo electrónico y datos
+                        de pago para procesar tus pedidos de manera eficiente. Nunca compartimos tu información con
+                        terceros sin tu consentimiento explícito, salvo en casos necesarios para cumplir con la ley.</p>
+
+                    <h5>2. Seguridad de los Datos</h5>
+                    <p>Nos tomamos muy en serio la seguridad de tus datos. Utilizamos medidas de seguridad estándar de
+                        la industria, como encriptación SSL, para proteger tu información durante la compra y el proceso
+                        de pago.</p>
+
+                    <h5>3. Cambios en la Privacidad</h5>
+                    <p>Nos reservamos el derecho de actualizar nuestra política de privacidad en cualquier momento.
+                        Cualquier cambio será publicado en esta página y, en algunos casos, te notificaremos por correo
+                        electrónico.</p>
+                </div>
+
+                <div class="privacy-btn-div">
+                    <a id="btn-back8" class="btn-back">Volver</a>
+                </div>
+            </section>
+
+            <section id="faq-panel" class="panel-section">
+                <div class="faq-container">
+                    <h4 class="faq-title">Preguntas Frecuentes</h4>
+
+                    <div class="faq-item">
+                        <h5>¿Cómo puedo hacer un pedido?</h5>
+                        <p>Para hacer un pedido, simplemente selecciona el producto que te interese, elige el tamaño y
+                            color. Luego, dirígete a la página de checkout para
+                            completar tu compra.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>¿Cuáles son los métodos de pago disponibles?</h5>
+                        <p>Aceptamos pagos a través de tarjeta de crédito, PayPal y transferencia bancaria. Todos los
+                            pagos son seguros.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>¿Puedo devolver un producto?</h5>
+                        <p>Sí, puedes devolver un producto dentro de los 30 días posteriores a la compra. El producto
+                            debe estar sin usar y en su empaque original. Para más detalles.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5>¿En qué países realizas envíos?</h5>
+                        <p>Actualmente, realizamos envíos solo dentro de Costa Rica, a través de Correos de Costa Rica.
+                            Si necesitas más detalles sobre los métodos de envío o áreas específicas de cobertura, no
+                            dudes en contactar con nosotros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-btn-div">
+                    <a id="btn-back9" class="btn-back">Volver</a>
+                </div>
+            </section>
         </main>
 
         <nav class="nav-secondary">
@@ -287,10 +353,10 @@
                     <button id="btn-menu-footer" class="hover-button">Menú</button>
                 </li>
                 <li>
-                    <button class="hover-button">Privacidad</button>
+                    <button id="privacy-btn" class="hover-button">Privacidad</button>
                 </li>
                 <li>
-                    <button class="hover-button">FAQ</button>
+                    <button id="faq-btn" class="hover-button">FAQ</button>
                 </li>
             </ul>
 

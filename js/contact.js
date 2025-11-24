@@ -5,13 +5,11 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   let valid = true;
 
-  // Limpiar mensajes previos
   document.querySelectorAll(".error-msg").forEach((msg) => {
     msg.textContent = "";
     msg.classList.remove("show");
   });
 
-  // Validación básica
   form.querySelectorAll("input, textarea, custom-dropdown").forEach((field) => {
     if (!field.value.trim()) {
       valid = false;
@@ -37,32 +35,29 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
-    const selected = dropdown.querySelector(".dropdown-selected");
-    const options = dropdown.querySelector(".dropdown-options");
-    const input = dropdown.querySelector("input[type=hidden]");
-    const caret = dropdown.querySelector(".dropdown-caret");
+document.querySelectorAll(".custom-dropdown").forEach((dropdown) => {
+  const selected = dropdown.querySelector(".dropdown-selected");
+  const options = dropdown.querySelector(".dropdown-options");
+  const input = dropdown.querySelector("input[type=hidden]");
+  const caret = dropdown.querySelector(".dropdown-caret");
 
-    // Toggle dropdown
-    selected.addEventListener("click", () => {
-      dropdown.classList.toggle("open");
-    });
+  selected.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+  });
 
-    // Handle option click
-    options.querySelectorAll("li").forEach(option => {
-      option.addEventListener("click", () => {
-        const value = option.getAttribute("data-value");
-        const text = option.textContent;
-        selected.textContent = text;
-        input.value = value;
-        dropdown.classList.remove("open");
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!dropdown.contains(e.target)) {
-        dropdown.classList.remove("open");
-      }
+  options.querySelectorAll("li").forEach((option) => {
+    option.addEventListener("click", () => {
+      const value = option.getAttribute("data-value");
+      const text = option.textContent;
+      selected.textContent = text;
+      input.value = value;
+      dropdown.classList.remove("open");
     });
   });
+
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
+});
