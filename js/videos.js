@@ -4,7 +4,7 @@ const iconPlay = document.getElementById("icon-play");
 const iconPause = document.getElementById("icon-pause");
 
 const audio = document.createElement("audio");
-audio.src = "/audio/wet-wipes.mp3";
+audio.src = "/audio/turnMyScaleOn.mp3";
 audio.preload = "metadata";
 
 let hideTimeout;
