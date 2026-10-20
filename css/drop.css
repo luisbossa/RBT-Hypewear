@@ -1,0 +1,168 @@
+.drop-section {
+  width: auto;
+  max-width: 550px;
+  display: none;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.drop-container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-self: center;
+  padding: 20px 0 15px 0;
+  gap: 2px;
+}
+
+.drop-cell {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.drop-cell button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: var(--c-white);
+  cursor: pointer;
+}
+
+.drop-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.drop-cell button:hover img {
+  transform: scale(1.05);
+}
+
+/*---------- drop SLIDER ------------*/
+
+.drop-img-toggle {
+  width: auto;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 10px 0;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.drop-div {
+  width: 100%;
+  max-width: 500px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.drop-imgs {
+  width: auto;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--c-white);
+}
+
+.drop-imgs img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.drop-imgs img.activo {
+  display: block;
+}
+
+.drop-content {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+}
+
+.drop-content h4 {
+  font-family: "Typewriter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.drop-content p {
+  font-family: "Typewriter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.controles {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.btn {
+  font-family: "Typewriter", sans-serif;
+  display: inline-block;
+  background: black;
+  color: var(--c-white);
+  padding: 10px 15px;
+  text-decoration: underline;
+  text-decoration-color: var(--c-yellow);
+  text-underline-offset: 4px;
+  border: 1px solid var(--c-blk);
+  cursor: pointer;
+}
+
+.drop-btn-div {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .drop-imgs {
+    height: 250px;
+  }
+}
+
+.btn.activo {
+  color: var(--c-blk);
+  background-color: var(--c-yellow);
+  text-decoration: none;
+}
+
+.btn-comprar {
+  color: var(--c-blk);
+  background-color: var(--c-white);
+  text-decoration-color: var(--c-blk);
+}
+
+#drop-precio {
+  margin-top: 10px;
+}
+
+.controles .btn {
+  font-size: 14px;
+}

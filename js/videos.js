@@ -1,0 +1,137 @@
+const video = document.getElementById("custom-video");
+const playBtn = document.getElementById("video-btn");
+const iconPlay = document.getElementById("icon-play");
+const iconPause = document.getElementById("icon-pause");
+
+const audio = document.createElement("audio");
+audio.src = "/audio/turnMyScaleOn.mp3";
+audio.preload = "metadata";
+
+let hideTimeout;
+let customButtonUsed = false;
+let isUserInteracting = false;
+
+function showAndAutoHideButton() {
+  playBtn.classList.remove("fade-out");
+  playBtn.classList.add("fade-in");
+  playBtn.style.display = "block";
+
+  clearTimeout(hideTimeout);
+
+  if (!video.paused) {
+    hideTimeout = setTimeout(() => {
+      playBtn.classList.remove("fade-in");
+      playBtn.classList.add("fade-out");
+    }, 2000);
+  }
+}
+
+playBtn.addEventListener("click", () => {
+  customButtonUsed = true;
+  isUserInteracting = true; 
+
+  if (video.paused) {
+    video.play();
+    audio.currentTime = video.currentTime;
+    audio.play();
+
+    iconPlay.style.display = "none";
+    iconPause.style.display = "block";
+  } else {
+    video.pause();
+    audio.pause();
+
+    iconPlay.style.display = "block";
+    iconPause.style.display = "none";
+  }
+  showAndAutoHideButton();
+
+  setTimeout(() => {
+    isUserInteracting = false;
+  }, 100);
+});
+
+video.addEventListener("play", () => {
+  if (!isUserInteracting) {
+    if (audio.paused) {
+      audio.currentTime = video.currentTime;
+      audio.play();
+    }
+    if (!customButtonUsed) {
+      playBtn.style.display = "none";
+    }
+  }
+});
+
+video.addEventListener("pause", () => {
+  if (!isUserInteracting) {
+    if (!audio.paused) {
+      audio.pause();
+    }
+  }
+});
+
+video.addEventListener("seeked", () => {
+  audio.currentTime = video.currentTime;
+});
+
+video.addEventListener("ended", () => {
+  video.currentTime = 0;
+  audio.pause();
+  audio.currentTime = 0;
+
+  iconPlay.style.display = "block";
+  iconPause.style.display = "none";
+
+  if (customButtonUsed) {
+    playBtn.style.display = "block";
+    playBtn.classList.remove("fade-out");
+    playBtn.classList.add("fade-in");
+  }
+});
+
+video.addEventListener("click", () => {
+  customButtonUsed = true;
+  isUserInteracting = true;
+
+  if (video.paused) {
+    video.play();
+    audio.currentTime = video.currentTime;
+    audio.play();
+
+    iconPlay.style.display = "none";
+    iconPause.style.display = "block";
+
+    showAndAutoHideButton();
+  } else {
+    video.pause();
+    audio.pause();
+
+    iconPlay.style.display = "block";
+    iconPause.style.display = "none";
+
+    playBtn.classList.remove("fade-out");
+    playBtn.classList.add("fade-in");
+    playBtn.style.display = "block";
+  }
+
+  setTimeout(() => {
+    isUserInteracting = false;
+  }, 100);
+});
+
+// Detiene el video local y su audio (al salir de la sección o al cambiar a otro video).
+function pausarVideoLocal() {
+  if (video.paused) return;
+  video.pause();
+  audio.pause();
+  iconPlay.style.display = "block";
+  iconPause.style.display = "none";
+  playBtn.style.display = "block";
+  playBtn.classList.remove("fade-out");
+  playBtn.classList.add("fade-in");
+}
+
+document.addEventListener("rbt:ruta", (e) => {
+  if (e.detail.nombre !== "videos") pausarVideoLocal();
+});

@@ -1,0 +1,183 @@
+:root {
+  --c-blk: #000;
+  --c-white: #fff;
+  --c-gray: #ccc;
+  --c-yellow: #f4ffa0;
+  --c-silver: #f3f4f7;
+}
+
+@font-face {
+  font-family: "SplendidI";
+  src: url("/fonts/SplendidI.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Typewriter";
+  src: url("/fonts/typewriter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  color: var(--c-white);
+  background-color: var(--c-blk);
+  user-select: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;              
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--c-blk); 
+}
+
+body:not(.js-loaded) .panels-wrapper {
+  opacity: 0;
+  visibility: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SplendidI", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--c-white);
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.main-wrapper {
+  width: 100%;
+  /* min-height (no height): con height fijo, las secciones largas se salían
+     del contenedor y el footer quedaba pegado al borde inferior. */
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2.3rem 1rem 1.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-div h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: clamp(1.7rem, 2.5vw, 2rem); 
+}
+
+.menu-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.logo-wrapper {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--c-yellow);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 230px; 
+  height: auto; 
+}
+
+.panels-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .secondary-list {
+  list-style: none;
+  display: inline-flex;
+  font-size: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+  gap: 20px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+  gap: 16px;
+}
+
+.social-list li a svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  fill: var(--c-gray);
+  transition: fill 0.3s ease;
+}
+
+.social-list li a:hover svg {
+  fill: var(--c-white);
+}
+
+.nav-secondary {
+  width: 100%;
+  max-width: 1040px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid #222;
+}
+
+.footer-date {
+  font-size: 20px;
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--c-yellow);
+}
+
+/* SplendidI no incluye tildes ni "₡": los precios van en Typewriter. */
+.precio {
+  font-family: "Typewriter", sans-serif;
+  font-size: 18px;
+  color: var(--c-yellow);
+}

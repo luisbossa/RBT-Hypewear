@@ -1,0 +1,139 @@
+.news-wrapper {
+  width: auto;
+  height: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.img-slider {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-slider-imagenes {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.img-slider img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-slider-div {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.news-button {
+  font-family: "SplendidI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 37px;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.news-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.news-content {
+  width: 300px;
+  padding: 20px 20px 0 20px;
+}
+
+.news-content h4 {
+  font-family: "Typewriter", sans-serif;
+  margin-bottom: 15px;
+}
+
+.news-content p {
+  font-family: "Typewriter", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn-back {
+  width: fit-content;
+  font-family: "Typewriter", sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  background: transparent;
+  color: var(--c-white);
+  padding: 10px 20px 10px 0;
+  text-decoration: underline;
+  text-decoration-color: var(--c-yellow);
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.y-color {
+  font-family: "SplendidI", sans-serif;
+  font-size: 20px;
+  color: var(--c-yellow);
+}
+
+.news-button.disabled {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+@media (max-width: 690px) {
+  .news-wrapper {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    padding: 20px 0;
+    gap: 14px;
+  }
+
+  .img-slider {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .news-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .img-slider-div {
+    padding: 0 5px;
+  }
+}

@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RBT vintage</title>
+    <meta
+      name="description"
+      content="RBT (Rats Boys T-Shirts): marca de skate nacida en Costa Rica. Drops, lookbook, videos y tienda en línea."
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/news.css" />
+    <link rel="stylesheet" href="/css/drop.css" />
+    <link rel="stylesheet" href="/css/lookbook.css" />
+    <link rel="stylesheet" href="/css/videos.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/privacy.css" />
+    <link rel="stylesheet" href="/css/faq.css" />
+    <link rel="stylesheet" href="/css/shop.css" />
+    <link rel="stylesheet" href="/css/sections.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="logo-div">
+        <button class="menu-toggle-btn" aria-label="Ir al menú" data-route="">
+          <div class="logo-wrapper">
+            <img class="logo-img" src="/images/logo.png" alt="Logo RBT" />
+          </div>
+        </button>
+
+        <h1>Rats Boys T-Shirts</h1>
+      </div>
+
+      <nav class="nav-top" aria-label="Secciones">
+        <ul class="nav-top-list">
+          <li>
+            <button class="hover-button" data-route="noticias">Noticias</button>
+          </li>
+          <li><button class="hover-button" data-route="drop">Drop</button></li>
+          <li>
+            <button class="hover-button" data-route="lookbook">Lookbook</button>
+          </li>
+          <li>
+            <button class="hover-button" data-route="tienda">Tienda</button>
+          </li>
+          <li>
+            <button class="hover-button" data-route="videos">Videos</button>
+          </li>
+          <li>
+            <button class="hover-button" data-route="random">Random</button>
+          </li>
+          <li>
+            <button class="hover-button" data-route="acerca">Acerca de</button>
+          </li>
+          <li>
+            <button class="hover-button" data-route="contacto">Contacto</button>
+          </li>
+          <li class="cart-li" style="display: none">
+            <button class="hover-button nav-top-cart" data-route="carrito">
+              Carrito (<span class="cart-count">0</span>)
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="panels-wrapper">
+        <div class="menu-wrapper">
+          <nav class="nav-main">
+            <ul class="nav-list">
+              <li>
+                <button
+                  id="btn-noticias"
+                  class="hover-button"
+                  data-route="noticias"
+                >
+                  Noticias
+                </button>
+              </li>
+              <li>
+                <button id="btn-preview" class="hover-button" data-route="drop">
+                  Drop invierno 2025
+                </button>
+              </li>
+              <li>
+                <button
+                  id="btn-lookbook"
+                  class="hover-button"
+                  data-route="lookbook"
+                >
+                  Lookbook 2025
+                </button>
+              </li>
+              <li class="submenu-wrapper">
+                <button class="hover-button" id="toggle-submenu">Tienda</button>
+                <div class="submenu" id="submenu">
+                  <button class="submenu-item" data-route="tienda">
+                    Ver todo
+                  </button>
+                  <button class="submenu-item" data-route="tienda/ropa">
+                    Ropa
+                  </button>
+                  <button class="submenu-item" data-route="tienda/accesorios">
+                    Accesorios
+                  </button>
+                  <button class="submenu-item" data-route="tienda/decks">
+                    Decks
+                  </button>
+                </div>
+              </li>
+              <li>
+                <button
+                  id="btn-videos"
+                  class="hover-button"
+                  data-route="videos"
+                >
+                  Videos
+                </button>
+              </li>
+              <li>
+                <button
+                  id="btn-random"
+                  class="hover-button"
+                  data-route="random"
+                >
+                  Random
+                </button>
+              </li>
+              <li>
+                <button id="btn-about" class="hover-button" data-route="acerca">
+                  Acerca de
+                </button>
+              </li>
+              <li>
+                <button
+                  id="btn-contact"
+                  class="hover-button"
+                  data-route="contacto"
+                >
+                  Contacto
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- News list -->
+        <section id="news-list" class="news-list-section">
+          <div class="section-head">
+            <h2>Noticias</h2>
+            <span class="section-meta" id="news-meta"></span>
+          </div>
+          <div class="news-lista" id="news-lista"><!-- Dinámic data --></div>
+          <div class="section-btn-div">
+            <a class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+
+        <!-- News post -->
+        <div class="news-wrapper">
+          <div class="img-slider" id="img-slider">
+            <div class="img-slider-imagenes" id="img-slider-img">
+              <!-- Dinámic data -->
+            </div>
+
+            <!-- Next / back buttons -->
+            <div class="img-slider-div">
+              <button
+                class="news-button"
+                id="news-back"
+                aria-label="Imagen anterior"
+              >
+                &#10094;
+              </button>
+              <button
+                class="news-button"
+                id="news-next"
+                aria-label="Imagen siguiente"
+              >
+                &#10095;
+              </button>
+            </div>
+            <span class="slider-contador" id="slider-contador"></span>
+          </div>
+
+          <div class="news-content">
+            <h4>
+              Fecha de publicación:
+              <span class="y-color" id="news-fecha"></span>
+            </h4>
+            <h4 id="news-titulo"><!-- Dinámic data --></h4>
+            <div class="news-texto" id="news-texto"><!-- Dinámic data --></div>
+
+            <a id="news-enlace" class="btn btn-comprar" href="#"></a>
+
+            <div class="post-nav">
+              <a id="news-prev" class="product-link" href="#"></a>
+              <a id="news-sig" class="product-link" href="#"></a>
+            </div>
+
+            <a id="btn-back" class="btn-back" href="#noticias">Atrás</a>
+          </div>
+        </div>
+
+        <section id="drop" class="drop-section">
+          <div class="section-head">
+            <h2>Drop invierno 2025</h2>
+            <span class="section-meta">
+              <span id="drop-meta"></span> /
+              <a class="product-link" href="#tienda/ropa">Ver en tienda</a>
+            </span>
+          </div>
+          <div class="drop-container" id="drop-grid"><!-- Dinámic data --></div>
+
+          <div class="drop-btn-div">
+            <a id="btn-back2" class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+
+        <!-- Image dinamic toggle -->
+        <section class="drop-img-toggle" id="drop-img-toggle">
+          <div class="drop-div">
+            <div class="drop-imgs"><!-- Dinámic data --></div>
+            <div class="drop-content">
+              <h4 id="drop-titulo"><!-- Dinámic data --></h4>
+              <p id="drop-texto"><!-- Dinámic data --></p>
+              <p id="drop-precio" class="precio"><!-- Dinámic data --></p>
+            </div>
+            <div class="controles">
+              <button class="btn frontal">Frontal</button>
+              <button class="btn posterior">Posterior</button>
+              <a id="drop-comprar" class="btn btn-comprar" href="#">Comprar</a>
+            </div>
+
+            <div class="item-nav">
+              <a id="drop-prev" class="product-link" href="#">‹ Anterior</a>
+              <span class="item-contador" id="drop-contador"></span>
+              <a id="drop-next" class="product-link" href="#">Siguiente ›</a>
+            </div>
+
+            <div class="drop-btn-div">
+              <a id="btn-back3" class="btn-back" href="#drop">Atrás</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lookbook section -->
+        <section id="lookbook" class="lookbook-container">
+          <div class="section-head">
+            <h2>Lookbook 2025</h2>
+            <div class="look-vistas" role="group" aria-label="Vista">
+              <button class="hover-button active" data-vista="visor">
+                Visor
+              </button>
+              <button class="hover-button" data-vista="grid">Cuadrícula</button>
+            </div>
+          </div>
+
+          <ul class="look-filtros" id="look-filtros">
+            <!-- Dinámic data -->
+          </ul>
+
+          <!-- Vista visor -->
+          <div class="look-visor" id="look-visor">
+            <div class="look-stage-col">
+              <div class="look-stage" id="look-stage">
+                <img
+                  id="imagen-grande"
+                  src=""
+                  alt=""
+                  title="Ver en pantalla completa"
+                />
+                <button
+                  id="look-prev"
+                  class="news-button look-flecha look-flecha-izq"
+                  aria-label="Look anterior"
+                >
+                  &#10094;
+                </button>
+                <button
+                  id="look-next"
+                  class="news-button look-flecha look-flecha-der"
+                  aria-label="Look siguiente"
+                >
+                  &#10095;
+                </button>
+                <span class="slider-contador" id="look-contador"></span>
+              </div>
+              <div class="look-tira" id="miniaturas"><!-- Dinámic data --></div>
+            </div>
+
+            <aside class="look-info">
+              <span class="look-numero" id="look-numero"></span>
+              <h3 class="look-titulo" id="titulo"><!-- Dinámic data --></h3>
+              <p class="look-desc" id="descripcion"><!-- Dinámic data --></p>
+
+              <p class="product-label">Prendas</p>
+              <ul class="look-prendas" id="look-prendas"></ul>
+
+              <dl class="look-datos">
+                <dt>Locación</dt>
+                <dd id="look-locacion"></dd>
+                <dt>Estilo</dt>
+                <dd id="look-estilo"></dd>
+                <dt>Temporada</dt>
+                <dd>Lookbook 2025</dd>
+              </dl>
+
+              <div class="look-acciones">
+                <button class="btn" id="look-compartir">Compartir look</button>
+                <a class="btn btn-comprar" href="#tienda">Ir a la tienda</a>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Vista cuadrícula -->
+          <div class="look-grid" id="look-grid"><!-- Dinámic data --></div>
+
+          <div class="lookbook-btn-div">
+            <a id="btn-back4" class="btn-back" href="#">Atrás</a>
+          </div>
+
+          <!-- Pantalla completa -->
+          <div
+            class="look-lightbox"
+            id="look-lightbox"
+            role="dialog"
+            aria-label="Look en pantalla completa"
+          >
+            <button class="look-cerrar" id="look-cerrar" aria-label="Cerrar">
+              &times;
+            </button>
+            <img id="look-lightbox-img" src="" alt="" />
+            <button
+              class="news-button look-flecha look-flecha-izq"
+              id="lb-prev"
+              aria-label="Look anterior"
+            >
+              &#10094;
+            </button>
+            <button
+              class="news-button look-flecha look-flecha-der"
+              id="lb-next"
+              aria-label="Look siguiente"
+            >
+              &#10095;
+            </button>
+            <p class="look-lightbox-caption" id="look-lightbox-caption"></p>
+          </div>
+        </section>
+
+        <!-- Video section -->
+        <section id="video-section" class="video-section">
+          <div class="section-head">
+            <h2>Videos</h2>
+            <span class="section-meta" id="videos-meta"></span>
+          </div>
+
+          <div class="video-container" id="video-container">
+            <!-- Reproductor de YouTube: se crea al darle play -->
+            <div class="video-embed" id="video-embed"></div>
+
+            <video
+              id="custom-video"
+              src="/videos/video-1.mp4"
+              title="DAMN - Video by Alex"
+              poster="/images/video-cover.jpg"
+              preload="metadata"
+              controls
+              muted
+            >
+              Tu navegador no soporta el elemento de video.
+            </video>
+
+            <button id="video-btn" class="video-button">
+              <!-- Ícono Play -->
+              <svg
+                id="icon-play"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="white"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+
+              <!-- Ícono Pause -->
+              <svg
+                id="icon-pause"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="white"
+                style="display: none"
+              >
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="video-info">
+            <div class="description-div">
+              <span class="video-tag" id="video-tag"></span>
+              <h2 id="video-titulo"><!-- Dinámic data --></h2>
+              <p class="video-desc" id="video-desc"></p>
+              <dl class="video-creditos" id="video-creditos">
+                <!-- Dinámic data -->
+              </dl>
+              <p class="video-fuente" id="video-fuente"></p>
+            </div>
+            <div class="video-buttons">
+              <button id="video-more" class="video-btn">Más videos</button>
+              <button id="video-next" class="video-btn">Siguiente</button>
+              <button id="video-share" class="video-btn">Compartir</button>
+            </div>
+          </div>
+
+          <div class="videos-lista" id="videos-lista">
+            <div class="videos-lista-head">
+              <h3>Más videos</h3>
+              <ul class="look-filtros" id="videos-filtros">
+                <!-- Dinámic data -->
+              </ul>
+            </div>
+            <div class="videos-grid" id="videos-grid">
+              <!-- Dinámic data -->
+            </div>
+          </div>
+
+          <a id="btn-back5" class="btn-back" href="#">Atrás</a>
+        </section>
+
+        <!-- About section -->
+        <section id="about-section" class="about-section">
+          <div class="about-container">
+            <h4 class="about-title">Sobre RBT</h4>
+            <p>
+              En el 2025 nació <strong>RBT (Rats Boys T-shirts)</strong>, una
+              marca creada por y para skaters. Nacida en Costa Rica, su esencia
+              viene de la calle, de los spots y del estilo libre que mueve la
+              cultura del skate.
+            </p>
+            <p>
+              Más que una marca, RBT es un espacio para crear, conectar y
+              mantener viva la esencia del skate.
+            </p>
+          </div>
+
+          <div class="about-strip">
+            <a href="#lookbook/1"
+              ><img
+                src="/images/lookbook/look-1.jpg"
+                alt="Look 1"
+                loading="lazy"
+            /></a>
+            <a href="#lookbook/6"
+              ><img
+                src="/images/lookbook/look-6.jpg"
+                alt="Look 6"
+                loading="lazy"
+            /></a>
+            <a href="#lookbook/13"
+              ><img
+                src="/images/lookbook/look-13.jpg"
+                alt="Look 13"
+                loading="lazy"
+            /></a>
+            <a href="#lookbook/14"
+              ><img
+                src="/images/lookbook/look-14.jpg"
+                alt="Look 14"
+                loading="lazy"
+            /></a>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h5>Por y para skaters</h5>
+              <p>
+                Cada prenda se piensa para patinar: cortes amplios, telas
+                resistentes y gráficos con actitud.
+              </p>
+            </div>
+            <div class="about-card">
+              <h5>Nacidos en Costa Rica</h5>
+              <p>
+                Venimos de la calle y de los spots de Costa Rica, y enviamos a
+                todo el país por Correos de Costa Rica.
+              </p>
+            </div>
+            <div class="about-card">
+              <h5>Drops limitados</h5>
+              <p>
+                Trabajamos con tiradas cortas por temporada. Síguenos para no
+                perderte el próximo drop.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-links">
+            <a class="product-link" href="#tienda">Ver tienda</a>
+            <a class="product-link" href="#lookbook">Ver lookbook</a>
+            <a class="product-link" href="#videos">Ver videos</a>
+            <a class="product-link" href="#contacto">Contacto</a>
+          </div>
+          <div class="about-btn-div">
+            <a id="btn-back6" class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+
+        <section id="contact-section" class="contact-section">
+          <div class="section-head">
+            <h2>Contacto</h2>
+            <span class="section-meta">Escríbenos, te leemos</span>
+          </div>
+
+          <div class="contact-layout">
+            <!-- Canales y respuestas rápidas -->
+            <aside class="contact-canales">
+              <p class="product-label">Síguenos</p>
+              <a class="canal" href="https://www.instagram.com/lilalerr" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M5 0C2.243 0 0 2.243 0 5V13C0 15.757 2.243 18 5 18H13C15.757 18 18 15.757 18 13V5C18 2.243 15.757 0 13 0H5ZM5 2H13C14.654 2 16 3.346 16 5V13C16 14.654 14.654 16 13 16H5C3.346 16 2 14.654 2 13V5C2 3.346 3.346 2 5 2ZM14 3C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4C13 4.26522 13.1054 4.51957 13.2929 4.70711C13.4804 4.89464 13.7348 5 14 5C14.2652 5 14.5196 4.89464 14.7071 4.70711C14.8946 4.51957 15 4.26522 15 4C15 3.73478 14.8946 3.48043 14.7071 3.29289C14.5196 3.10536 14.2652 3 14 3ZM9 4C6.243 4 4 6.243 4 9C4 11.757 6.243 14 9 14C11.757 14 14 11.757 14 9C14 6.243 11.757 4 9 4ZM9 6C10.654 6 12 7.346 12 9C12 10.654 10.654 12 9 12C7.346 12 6 10.654 6 9C6 7.346 7.346 6 9 6Z"></path></svg>
+                <span><strong>Instagram</strong><small>@lilalerr</small></span>
+              </a>
+              <a class="canal" href="https://www.tiktok.com/@lilalerr" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path></svg>
+                <span><strong>TikTok</strong><small>@lilalerr</small></span>
+              </a>
+
+              <p class="product-label">Respuestas rápidas</p>
+              <ul class="contact-rapidas">
+                <li><a href="#ayuda/pedido">Estado de mi pedido</a></li>
+                <li><a href="#ayuda/envios">Envíos a Costa Rica</a></li>
+                <li><a href="#ayuda/devoluciones">Cambios y devoluciones</a></li>
+                <li><a href="#ayuda/tallas">Guía de tallas</a></li>
+                <li><a href="#faq">Preguntas frecuentes</a></li>
+              </ul>
+
+              <p class="contact-nota">
+                RBT nació en Costa Rica. Hacemos envíos a todo el país por
+                Correos de Costa Rica.
+              </p>
+            </aside>
+
+            <!-- Formulario -->
+            <div class="contact-container">
+              <form class="contact-form" id="rbtForm" novalidate>
+                <h4 class="cart-title">Envíanos un mensaje</h4>
+
+                <div class="form-group">
+                  <span class="campo-label">Motivo</span>
+                  <div class="motivos" role="radiogroup" aria-label="Motivo">
+                    <label><input type="radio" name="subject" value="general" required /><span>Consulta general</span></label>
+                    <label><input type="radio" name="subject" value="pedido" /><span>Pedido o envío</span></label>
+                    <label><input type="radio" name="subject" value="colaboraciones" /><span>Colaboraciones</span></label>
+                    <label><input type="radio" name="subject" value="eventos" /><span>Eventos o patrocinios</span></label>
+                  </div>
+                  <span class="error-msg"></span>
+                </div>
+
+                <div class="form-fila">
+                  <div class="form-group">
+                    <label class="campo-label" for="contacto-nombre">Nombre</label>
+                    <input type="text" id="contacto-nombre" name="firstName" placeholder="Tu nombre" autocomplete="name" required />
+                    <span class="error-msg"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="campo-label" for="contacto-email">Correo electrónico</label>
+                    <input type="email" id="contacto-email" name="email" placeholder="tu@correo.com" autocomplete="email" required />
+                    <span class="error-msg"></span>
+                  </div>
+                </div>
+
+                <div class="form-group campo-pedido" id="campo-pedido">
+                  <label class="campo-label" for="contacto-pedido">Número de pedido <small>(opcional)</small></label>
+                  <input type="text" id="contacto-pedido" name="pedido" placeholder="RBT-123456" />
+                  <span class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="campo-label" for="contacto-mensaje">
+                    Mensaje <small class="contador" id="contador-mensaje">0 / 500</small>
+                  </label>
+                  <textarea id="contacto-mensaje" name="message" placeholder="Cuéntanos en qué te ayudamos" rows="6" maxlength="500" required></textarea>
+                  <span class="error-msg"></span>
+                </div>
+
+                <button type="submit" class="btn-agregar btn-enviar">Enviar mensaje</button>
+              </form>
+
+              <div class="success-message" id="successMessage" aria-live="polite">
+                <img src="/images/vomitada.png" alt="" />
+                <h4>¡Mensaje enviado!</h4>
+                <p>Gracias, <span id="success-nombre"></span>. Te responderemos a <span id="success-email"></span>.</p>
+                <button type="button" class="btn-submit" id="contacto-otro">Enviar otro mensaje</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-btn-div">
+            <a id="btn-back7" class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+
+        <section id="privacy-panel" class="privacy-section">
+          <div class="section-head">
+            <h2>Privacidad</h2>
+            <span class="section-meta">Última actualización: 20/10/2026</span>
+          </div>
+
+          <div class="legal-layout">
+            <nav class="legal-indice" aria-label="Contenido">
+              <p class="product-label">Contenido</p>
+              <ol id="privacy-indice">
+                <li><button data-ir="priv-datos">Datos que recopilamos</button></li>
+                <li><button data-ir="priv-uso">Cómo los usamos</button></li>
+                <li><button data-ir="priv-pagos">Pagos</button></li>
+                <li><button data-ir="priv-navegador">Datos en tu navegador</button></li>
+                <li><button data-ir="priv-derechos">Tus derechos</button></li>
+                <li><button data-ir="priv-cambios">Cambios en esta política</button></li>
+              </ol>
+            </nav>
+
+            <div class="privacy-container">
+              <div class="legal-resumen">
+                <p class="legal-resumen-titulo">En resumen</p>
+                <ul>
+                  <li>Solo pedimos los datos necesarios para enviarte tu pedido y responderte.</li>
+                  <li>No pedimos ni guardamos datos de tarjetas.</li>
+                  <li>Nunca vendemos ni compartimos tu información sin tu permiso.</li>
+                </ul>
+              </div>
+
+              <p>
+                Nos importa tu privacidad y queremos que tengas la mejor
+                experiencia de compra posible. Aquí te explicamos qué
+                información manejamos y para qué.
+              </p>
+
+              <article class="legal-bloque" id="priv-datos">
+                <h5><span>01</span> Datos que recopilamos</h5>
+                <p>
+                  Al hacer un pedido te pedimos nombre, correo electrónico,
+                  teléfono, provincia y dirección de envío. Si nos escribes desde
+                  Contacto, recibimos tu nombre, tu correo y tu mensaje. Si te
+                  suscribes al newsletter, solo tu correo.
+                </p>
+              </article>
+
+              <article class="legal-bloque" id="priv-uso">
+                <h5><span>02</span> Cómo los usamos</h5>
+                <p>
+                  Usamos tus datos para procesar y enviar tus pedidos por Correos
+                  de Costa Rica, responder tus mensajes y, si te suscribiste,
+                  avisarte de nuevos drops. Nunca compartimos tu información con
+                  terceros sin tu consentimiento explícito, salvo en casos
+                  necesarios para cumplir con la ley o para entregar tu paquete.
+                </p>
+              </article>
+
+              <article class="legal-bloque" id="priv-pagos">
+                <h5><span>03</span> Pagos</h5>
+                <p>
+                  Los pagos se hacen por SINPE Móvil, transferencia bancaria o
+                  PayPal, fuera de este sitio. RBT no pide ni guarda números de
+                  tarjeta ni contraseñas bancarias.
+                </p>
+              </article>
+
+              <article class="legal-bloque" id="priv-navegador">
+                <h5><span>04</span> Datos en tu navegador</h5>
+                <p>
+                  Para que tu carrito no se pierda, el sitio guarda algunos datos
+                  solo en este navegador (almacenamiento local). No se envían a
+                  ningún servidor y puedes borrarlos cuando quieras.
+                </p>
+                <dl class="legal-datos" id="privacy-datos"><!-- Dinámic data --></dl>
+                <button class="btn-submit legal-borrar" id="privacy-borrar">Borrar mis datos de este navegador</button>
+                <p class="legal-estado" id="privacy-estado" aria-live="polite"></p>
+              </article>
+
+              <article class="legal-bloque" id="priv-derechos">
+                <h5><span>05</span> Tus derechos</h5>
+                <p>
+                  Puedes pedirnos ver, corregir o eliminar los datos que tenemos
+                  sobre ti. Escríbenos desde
+                  <a class="legal-link" href="#contacto/general">Contacto</a> y lo
+                  resolvemos.
+                </p>
+              </article>
+
+              <article class="legal-bloque" id="priv-cambios">
+                <h5><span>06</span> Cambios en esta política</h5>
+                <p>
+                  Nos reservamos el derecho de actualizar esta política en
+                  cualquier momento. Cualquier cambio será publicado en esta
+                  página y, en algunos casos, te notificaremos por correo
+                  electrónico.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="privacy-btn-div">
+            <a id="btn-back8" class="btn-back" href="#">Volver</a>
+          </div>
+        </section>
+
+        <section id="faq-panel" class="faq-section">
+          <div class="section-head">
+            <h2>FAQ</h2>
+            <span class="section-meta" id="faq-meta"></span>
+          </div>
+
+          <div class="faq-buscador">
+            <input type="search" id="faq-buscar" placeholder="Busca tu pregunta: envío, talla, pago…" aria-label="Buscar en preguntas frecuentes" autocomplete="off" />
+          </div>
+          <ul class="look-filtros" id="faq-filtros"><!-- Dinámic data --></ul>
+
+          <div class="faq-container">
+            <div class="faq-lista" id="faq-lista"><!-- Dinámic data --></div>
+            <p class="faq-vacio" id="faq-vacio">
+              No encontramos preguntas con esa búsqueda.
+            </p>
+          </div>
+
+          <div class="faq-cta">
+            <div>
+              <p class="faq-cta-titulo">¿No encontraste tu respuesta?</p>
+              <p>Escríbenos y te ayudamos con tu pedido, tallas o lo que necesites.</p>
+            </div>
+            <a class="btn-agregar" href="#contacto">Contactar a RBT</a>
+          </div>
+
+          <div class="faq-btn-div">
+            <a id="btn-back9" class="btn-back" href="#">Volver</a>
+          </div>
+        </section>
+
+        <!-- Shop section -->
+        <section id="shop-section" class="shop-section">
+          <div class="section-head">
+            <h2 id="shop-titulo">Tienda</h2>
+            <span class="section-meta" id="shop-meta"></span>
+          </div>
+          <div class="shop-layout">
+            <ul class="shop-filtros" id="shop-filtros">
+              <!-- Dinámic data -->
+            </ul>
+            <div class="shop-main">
+              <div class="shop-grid" id="shop-grid"><!-- Dinámic data --></div>
+              <p class="shop-vacio" id="shop-vacio">
+                Próximamente. Síguenos en
+                <a
+                  href="https://www.instagram.com/lilalerr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+                para enterarte del próximo drop.
+              </p>
+            </div>
+          </div>
+          <div class="shop-btn-div">
+            <a class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+
+        <!-- Product section -->
+        <section id="product-section" class="product-section">
+          <div class="product-migas" id="product-migas"></div>
+
+          <div class="product-gallery">
+            <div class="product-img-div">
+              <img id="product-img" src="" alt="" />
+            </div>
+            <div class="product-thumbs" id="product-thumbs"></div>
+          </div>
+
+          <div class="product-content">
+            <h2 id="product-nombre"><!-- Dinámic data --></h2>
+            <p class="product-color" id="product-color"></p>
+            <p class="product-desc" id="product-desc"></p>
+            <p class="precio" id="product-precio"></p>
+
+            <p class="product-label">Talla</p>
+            <div class="product-tallas" id="product-tallas"></div>
+
+            <button class="btn-agregar" id="product-agregar">
+              Agregar al carrito
+            </button>
+            <p
+              class="product-estado"
+              id="product-estado"
+              aria-live="polite"
+            ></p>
+
+            <details class="product-info">
+              <summary>Guía de tallas</summary>
+              <table class="tabla-tallas" id="product-guia"></table>
+              <p>Medidas aproximadas de la prenda en plano.</p>
+            </details>
+            <details class="product-info">
+              <summary>Envío y devoluciones</summary>
+              <p>
+                Envío a todo Costa Rica por Correos de Costa Rica (₡3 000).
+                Puedes devolver un producto dentro de los 30 días posteriores a
+                la compra, sin usar y en su empaque original.
+                <a class="product-link" href="#ayuda/envios">Más información</a>
+              </p>
+            </details>
+
+            <div class="item-nav">
+              <a id="product-prev" class="product-link" href="#">‹ Anterior</a>
+              <a id="product-next" class="product-link" href="#">Siguiente ›</a>
+            </div>
+
+            <a id="product-atras" class="btn-back" href="#tienda">Atrás</a>
+          </div>
+
+          <div class="product-relacionados-div">
+            <h5 class="product-label">También te puede gustar</h5>
+            <div class="related-grid" id="product-relacionados"></div>
+          </div>
+        </section>
+
+        <!-- Cart section -->
+        <section id="cart-section" class="cart-section">
+          <div class="cart-container">
+            <h4 class="cart-title">Carrito</h4>
+
+            <p class="cart-vacio" id="cart-vacio">Tu carrito está vacío.</p>
+            <ul class="cart-lista" id="cart-lista">
+              <!-- Dinámic data -->
+            </ul>
+
+            <div class="cart-resumen" id="cart-resumen">
+              <p class="cart-total">
+                Subtotal <span id="cart-subtotal"></span>
+              </p>
+              <p class="cart-nota">El envío se calcula en el checkout.</p>
+              <a class="btn-submit btn-pagar" href="#checkout">Pagar</a>
+            </div>
+          </div>
+
+          <div class="about-btn-div">
+            <a class="btn-back" href="#tienda">Seguir comprando</a>
+          </div>
+        </section>
+
+        <!-- Checkout section -->
+        <section id="checkout-section" class="checkout-section">
+          <div class="checkout-container" id="checkout-box">
+            <form class="contact-form" id="checkout-form" novalidate>
+              <h4 class="cart-title">Datos de envío</h4>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre completo"
+                  autocomplete="name"
+                  required
+                />
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Correo electrónico"
+                  autocomplete="email"
+                  required
+                />
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="Teléfono"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-group custom-dropdown">
+                <div class="dropdown-selected">Provincia</div>
+                <svg
+                  class="dropdown-caret"
+                  width="7"
+                  height="6"
+                  viewBox="0 0 7 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path d="M3.5 5.2L0.04 0.4h6.92L3.5 5.2z" fill="#000"></path>
+                </svg>
+                <ul class="dropdown-options">
+                  <li data-value="san-jose">San José</li>
+                  <li data-value="alajuela">Alajuela</li>
+                  <li data-value="cartago">Cartago</li>
+                  <li data-value="heredia">Heredia</li>
+                  <li data-value="guanacaste">Guanacaste</li>
+                  <li data-value="puntarenas">Puntarenas</li>
+                  <li data-value="limon">Limón</li>
+                </ul>
+
+                <input type="hidden" name="provincia" required />
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  name="direccion"
+                  placeholder="Dirección exacta (cantón, distrito, señas)"
+                  rows="3"
+                  autocomplete="street-address"
+                  required
+                ></textarea>
+                <span class="error-msg"></span>
+              </div>
+
+              <h4 class="cart-title">Método de pago</h4>
+
+              <div class="form-group pago-opciones">
+                <label>
+                  <input type="radio" name="pago" value="sinpe" required />
+                  SINPE Móvil
+                </label>
+                <label>
+                  <input type="radio" name="pago" value="transferencia" />
+                  Transferencia bancaria
+                </label>
+                <label>
+                  <input type="radio" name="pago" value="paypal" />
+                  PayPal
+                </label>
+                <span class="error-msg"></span>
+              </div>
+
+              <input
+                type="submit"
+                value="Confirmar pedido"
+                class="btn-submit"
+              />
+            </form>
+
+            <aside class="checkout-resumen">
+              <h4 class="cart-title">Resumen</h4>
+              <ul class="checkout-lineas" id="checkout-lineas"></ul>
+              <p><span>Subtotal</span><span id="checkout-subtotal"></span></p>
+              <p>
+                <span>Envío (Correos de CR)</span
+                ><span id="checkout-envio"></span>
+              </p>
+              <p class="cart-total">
+                <span>Total</span><span id="checkout-total"></span>
+              </p>
+            </aside>
+          </div>
+
+          <div class="pedido-confirmado" id="pedido-confirmado">
+            <img src="/images/vomitada.png" alt="Pedido recibido" />
+            <h4>¡Pedido recibido!</h4>
+            <p>
+              Número de pedido:
+              <span class="y-color" id="pedido-numero"></span>
+            </p>
+            <p>
+              Total: <span id="pedido-total"></span>. Te enviaremos las
+              instrucciones de pago a <span id="pedido-correo"></span>.
+            </p>
+          </div>
+
+          <div class="about-btn-div">
+            <a class="btn-back" href="#carrito">Atrás</a>
+          </div>
+        </section>
+        <!-- Random section -->
+        <section id="random-section" class="random-section">
+          <div class="random-img-div">
+            <img id="random-img" src="" alt="" title="Clic para otra imagen" />
+          </div>
+          <a
+            id="random-caption"
+            class="random-caption product-link"
+            href="#"
+          ></a>
+          <button id="random-otra" class="btn">Otra imagen</button>
+          <div class="section-btn-div">
+            <a class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+
+        <!-- Help section -->
+        <section id="help-section" class="help-section">
+          <div class="section-head">
+            <h2>Ayuda</h2>
+            <span class="section-meta"
+              >Envíos, devoluciones, tallas y pedidos</span
+            >
+          </div>
+
+          <ul class="help-tabs">
+            <li>
+              <button class="hover-button" data-route="ayuda/envios">
+                Envíos
+              </button>
+            </li>
+            <li>
+              <button class="hover-button" data-route="ayuda/devoluciones">
+                Devoluciones
+              </button>
+            </li>
+            <li>
+              <button class="hover-button" data-route="ayuda/tallas">
+                Tallas
+              </button>
+            </li>
+            <li>
+              <button class="hover-button" data-route="ayuda/pedido">
+                Estado del pedido
+              </button>
+            </li>
+          </ul>
+
+          <div class="help-container">
+            <div class="help-panel" data-panel="envios">
+              <h5>Envíos</h5>
+              <p>
+                Realizamos envíos solo dentro de Costa Rica, a través de Correos
+                de Costa Rica, con una tarifa única de ₡3 000 por pedido.
+              </p>
+              <p>
+                Al confirmar tu pedido te enviamos las instrucciones de pago por
+                correo. Despachamos el paquete una vez recibido el pago.
+              </p>
+            </div>
+
+            <div class="help-panel" data-panel="devoluciones">
+              <h5>Devoluciones</h5>
+              <p>
+                Puedes devolver un producto dentro de los 30 días posteriores a
+                la compra. El producto debe estar sin usar y en su empaque
+                original.
+              </p>
+              <p>
+                Para iniciar una devolución, escríbenos desde
+                <a class="product-link" href="#contacto/pedido">Contacto</a> con tu
+                número de pedido.
+              </p>
+            </div>
+
+            <div class="help-panel" data-panel="tallas">
+              <h5>Guía de tallas</h5>
+              <table class="tabla-tallas" id="help-tallas"></table>
+              <p>
+                Medidas aproximadas de la prenda en plano. Si estás entre dos
+                tallas, elige la mayor para un fit más amplio.
+              </p>
+            </div>
+
+            <div class="help-panel" data-panel="pedido">
+              <h5>Estado del pedido</h5>
+              <form class="pedido-form" id="pedido-form">
+                <input
+                  type="text"
+                  id="pedido-input"
+                  placeholder="Número de pedido (RBT-123456)"
+                  aria-label="Número de pedido"
+                />
+                <button type="submit" class="btn-submit">Buscar</button>
+              </form>
+              <div class="pedido-resultado" id="pedido-resultado"></div>
+              <div class="pedidos-recientes" id="pedidos-recientes"></div>
+            </div>
+          </div>
+
+          <div class="section-btn-div">
+            <a class="btn-back" href="#">Atrás</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Mini cart -->
+      <div class="mini-cart" id="mini-cart" role="status" aria-live="polite">
+        <button
+          class="mini-cart-cerrar"
+          id="mini-cart-cerrar"
+          aria-label="Cerrar"
+        >
+          &times;
+        </button>
+        <p class="mini-cart-titulo">Agregado al carrito</p>
+        <div class="mini-cart-item">
+          <img id="mini-cart-img" src="" alt="" />
+          <div>
+            <p id="mini-cart-nombre"></p>
+            <p class="mini-cart-detalle" id="mini-cart-detalle"></p>
+          </div>
+        </div>
+        <p class="mini-cart-total">
+          <span id="mini-cart-cantidad"></span
+          ><span id="mini-cart-subtotal"></span>
+        </p>
+        <div class="mini-cart-acciones">
+          <a class="mini-btn" href="#carrito">Ver carrito</a>
+          <a class="mini-btn mini-btn-y" href="#checkout">Pagar</a>
+        </div>
+      </div>
+
+      <nav class="nav-secondary">
+        <form class="newsletter" id="newsletter-form" novalidate>
+          <label for="newsletter-email">Recibe avisos de nuevos drops</label>
+          <div class="newsletter-row">
+            <input
+              type="email"
+              id="newsletter-email"
+              name="email"
+              placeholder="Correo electrónico"
+              autocomplete="email"
+            />
+            <button type="submit">Suscribirme</button>
+          </div>
+          <p class="newsletter-msg" id="newsletter-msg" aria-live="polite"></p>
+        </form>
+
+        <ul class="secondary-list">
+          <li>
+            <button id="btn-menu-footer" class="hover-button" data-route="">
+              Menú
+            </button>
+          </li>
+          <li>
+            <button id="help-btn" class="hover-button" data-route="ayuda">
+              Ayuda
+            </button>
+          </li>
+          <li>
+            <button
+              id="privacy-btn"
+              class="hover-button"
+              data-route="privacidad"
+            >
+              Privacidad
+            </button>
+          </li>
+          <li>
+            <button id="faq-btn" class="hover-button" data-route="faq">
+              FAQ
+            </button>
+          </li>
+          <li class="cart-li" style="display: none">
+            <button class="hover-button" data-route="carrito">
+              Carrito (<span class="cart-count">0</span>)
+            </button>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li>
+            <a
+              href="https://www.instagram.com/lilalerr"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-label="Instagram"
+                role="img"
+              >
+                <path
+                  d="M5 0C2.243 0 0 2.243 0 5V13C0 15.757 2.243 18 5 18H13C15.757 18 18 15.757 18 13V5C18 2.243 15.757 0 13 0H5ZM5 2H13C14.654 2 16 3.346 16 5V13C16 14.654 14.654 16 13 16H5C3.346 16 2 14.654 2 13V5C2 3.346 3.346 2 5 2ZM14 3C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4C13 4.26522 13.1054 4.51957 13.2929 4.70711C13.4804 4.89464 13.7348 5 14 5C14.2652 5 14.5196 4.89464 14.7071 4.70711C14.8946 4.51957 15 4.26522 15 4C15 3.73478 14.8946 3.48043 14.7071 3.29289C14.5196 3.10536 14.2652 3 14 3ZM9 4C6.243 4 4 6.243 4 9C4 11.757 6.243 14 9 14C11.757 14 14 11.757 14 9C14 6.243 11.757 4 9 4ZM9 6C10.654 6 12 7.346 12 9C12 10.654 10.654 12 9 12C7.346 12 6 10.654 6 9C6 7.346 7.346 6 9 6Z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@lilalerr"
+              aria-label="Tiktok"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                fill="#ffffff"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+              >
+                <path
+                  d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <h2 class="footer-date">XX/XX/XXXX</h2>
+      </nav>
+    </div>
+
+    <script src="/js/products.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/img-toggle.js"></script>
+    <script src="/js/news.js"></script>
+    <script src="/js/lookbook.js"></script>
+    <script src="/js/random.js"></script>
+    <script src="/js/help.js"></script>
+    <script src="/js/legal.js"></script>
+    <script src="/js/videos.js"></script>
+    <script src="/js/video-list.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/shop.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!-- El router va al final: los demás scripts ya escuchan "rbt:ruta" -->
+    <script src="/js/panels.js"></script>
+  </body>
+</html>
